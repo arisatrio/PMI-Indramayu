@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-6">
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="{{ asset('/img/Logo-PMI-im.png') }}" class="navbar-brand" width="330" height="80" class="d-inline-block align-top" alt="" >
+                        <img src="{{ asset('/img/Logo-PMI-im.png') }}" class="navbar-brand" width="100%" height="80" class="d-inline-block align-top" alt="" >
                     </a>
                 </div>
                 <div class="col-6 d-flex-justify-content-center">
@@ -55,23 +55,23 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Beranda</a>
+                        <a class="nav-link" href="{{ route('index') }}">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Profil</a>
+                        <a class="nav-link" href="{{ route('profil') }}">Profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Agenda</a>
+                        <a class="nav-link" href="{{ route('agenda') }}">Agenda</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Informasi
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Informasi Manfaat Donor</a>
-                            <a class="dropdown-item" href="#">Informasi Prosedur Donor</a>
-                            <a class="dropdown-item" href="#">Informasi Prosedur Permintaan Darah</a>
-                            <a class="dropdown-item" href="#">Informasi Layanan Lainnya</a>
+                            <a class="dropdown-item" href="{{ route('manfaat-donor') }}">Informasi Manfaat Donor</a>
+                            <a class="dropdown-item" href="{{ route('prosedur-donor') }}">Informasi Prosedur Donor</a>
+                            <a class="dropdown-item" href="{{ route('prosedur-permintaan-darah') }}">Informasi Prosedur Permintaan Darah</a>
+                            <a class="dropdown-item" href="{{ route('layanan') }}">Informasi Layanan Lainnya</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -79,10 +79,10 @@
                             Formulir
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Formulir Permintaan Mobil Unit Donor</a>
-                            <a class="dropdown-item" href="#">Formulir Registrasi Donor</a>
-                            <a class="dropdown-item" href="#">Formulir Donor Rhesus Negatif</a>
-                            <a class="dropdown-item" href="#">Formulir Komunikasi (Pertanyaan & Saran)</a>
+                            <a class="dropdown-item" href="{{ route('permintaan-mobil-donor') }}">Formulir Permintaan Mobil Unit Donor</a>
+                            <a class="dropdown-item" href="{{ route('registrasi-donor') }}">Formulir Registrasi Donor</a>
+                            <a class="dropdown-item" href="{{ route('donor-rhesus-negatif') }}">Formulir Donor Rhesus Negatif</a>
+                            <a class="dropdown-item" href="{{ route('komunikasi') }}">Formulir Komunikasi (Pertanyaan & Saran)</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -90,13 +90,12 @@
                             Hubungi Kami
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">PMI Kabupaten Indramayu</a>
-                            <a class="dropdown-item" href="#">Pendaftaran Donor di Mobil Unit</a>
-                            <a class="dropdown-item" href="#">Layanan Pasien</a>
+                            <a class="dropdown-item" href="{{ route('pmi-indramayu') }}">PMI Kabupaten Indramayu</a>
+                            <a class="dropdown-item" href="{{ route('layanan-pasien') }}">Layanan Pasien</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
+                        <a class="nav-link" href="{{ route('faq') }}">FAQ</a>
                     </li>
                 </ul>
             </div>

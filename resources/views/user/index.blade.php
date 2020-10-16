@@ -59,7 +59,7 @@
             <div class="features-icons-icon d-flex">
               <i class="icon-pencil m-auto text-danger"></i>
             </div>
-            <a href="{{ route('daftar-donor') }}" class="text-dark">
+            <a href="{{ route('registrasi-donor') }}" class="text-dark">
               <h3>REGISTRASI DONOR</h3>
             </a>
             <p class="lead mb-0">Daftar donor di lokasi terdekat anda</p>
