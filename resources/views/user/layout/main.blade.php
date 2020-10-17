@@ -63,16 +63,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('agenda') }}">Agenda</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Informasi
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('manfaat-donor') }}">Informasi Manfaat Donor</a>
-                            <a class="dropdown-item" href="{{ route('prosedur-donor') }}">Informasi Prosedur Donor</a>
-                            <a class="dropdown-item" href="{{ route('prosedur-permintaan-darah') }}">Informasi Prosedur Permintaan Darah</a>
-                            <a class="dropdown-item" href="{{ route('layanan') }}">Informasi Layanan Lainnya</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('informasi') }}">Informasi</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -85,14 +77,8 @@
                             <a class="dropdown-item" href="{{ route('komunikasi') }}">Formulir Komunikasi (Pertanyaan & Saran)</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Hubungi Kami
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('pmi-indramayu') }}">PMI Kabupaten Indramayu</a>
-                            <a class="dropdown-item" href="{{ route('layanan-pasien') }}">Layanan Pasien</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('hubungi-kami') }}">Hubungi Kami</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('faq') }}">FAQ</a>

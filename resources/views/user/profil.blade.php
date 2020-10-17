@@ -29,7 +29,7 @@
         </div>
 
         <div class="col-sm-8 bg-transparent">
-            <div class="collapse" id="profil" >
+            <div class="collapsed" id="profil" >
                 <h4>Profil UTD PMI Jakarta</h4>
                 <div class="bg-danger mt-2 mb-2" style="height: 2px; width: 35%; opacity: 0.5;"></div>
                 <p>
@@ -43,8 +43,7 @@
             </div>
             <div class="collapse" id="moto">
                 <h4>Moto, Visi & Misi</h4>
-                <div class="bg-danger mt-2 mb-2" style="height: 2px; width: 25%; opacity: 0.5;"></div>
-                <p>
+                <div class="bg-danger mt-2 mb-2" style="height: 2px; width: 30%; opacity: 0.5;"></div>
                     <p class="text-danger">Moto</p>
                     <p class="font-italic">Bersama untuk sosial dan kemanusiaan</p>
                     <p class="text-danger">VISI</p>
@@ -54,7 +53,6 @@
                     2. Menyediakan sarana dan prasarana yang canggih dan mutakhir dalam menghasilkan darah yang sesuai standar <br>
                     3. Menjaga ketersediaan darah yang cukup, aman dan bermutu <br>
                     4. Membangun citra melalui komunikasi yang efektif dengan stakeholder<br></p>
-                </p>
                 <div class="bg-dark mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.2;"></div>
             </div>
             <div class="collapse" id="struktur">
