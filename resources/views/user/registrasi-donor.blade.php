@@ -3,6 +3,7 @@
 @section('title', 'Registrasir Donor | PMI Indramayu')
 
 @section('content')
+<<<<<<< HEAD
 <div class="container">
     <div class="row">
         <div class="col">
@@ -148,5 +149,7 @@
         </div>
     </div>
 </div>
+=======
+>>>>>>> 39f5b83549dce9ea832e3924d03e79b717440045
 
 @endsection
