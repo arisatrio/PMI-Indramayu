@@ -14,11 +14,7 @@
 
             <nav class="nav flex-column">
                 <a class="nav-link text-muted mb-2" data-toggle="collapse" href="#satu" role="button" aria-expanded="false" aria-controls="satu">
-<<<<<<< HEAD
                     <i class="fa fa-angle-right mr-2"></i>PMI Kab. Indramayu 
-=======
-                    <i class="fa fa-angle-right mr-2"></i>PMI Kab. Indramayu
->>>>>>> 39f5b83549dce9ea832e3924d03e79b717440045
                 </a>
                 <div class="bg-secondary" style="height: 1px; opacity: 0.2;"></div>
                 <a class="nav-link text-muted mb-2" data-toggle="collapse" href="#dua" role="button" aria-expanded="false" aria-controls="dua">
@@ -36,19 +32,11 @@
                 <h4>PMI Kab. Indramayu</h4>
                 <div class="bg-danger mt-2 mb-2" style="height: 2px; width: 35%; opacity: 0.5;"></div>
                 <p class="text-danger font-weight-bold">Alamat</p>
-<<<<<<< HEAD
                 <p>Jl. Yos Sudarso, Margadadi, Kec. Indramayu, Kabupaten Indramayu, Jawa Barat 45211</p>
                 <p class="text-danger font-weight-bold">No. Telp / HP</p>
                 <p>(0234) 274644</p>
                 <p class="text-danger font-weight-bold">Layanan Pelanggan</p>
                 <p>info@utdpmikabindramayu.or.id</p>
-=======
-                <p>Jalan Kramat Raya No. 47 Jakarta 10450, Indonesia</p>
-                <p class="text-danger font-weight-bold">No. Telp / HP</p>
-                <p>021 - 390 6666</p>
-                <p class="text-danger font-weight-bold">Layanan Pelanggan</p>
-                <p>info@utdpmidkijakarta.or.id</p>
->>>>>>> 39f5b83549dce9ea832e3924d03e79b717440045
 
                 <h1>GMAPS API LOKASI</h1>
                 <div class="bg-dark mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.2;"></div>
@@ -59,11 +47,7 @@
                 <p class="text-danger">Penyumbangan Darah Melalui Mobil Unit (MU)</p>
                 <p class="font-weight-bold">Yang disiapkan oleh instansi/organisasi ialah :</p>
                 <ol>
-<<<<<<< HEAD
                     <li>Lokasi donor berada diwilayah Kab. Indramayu</li>
-=======
-                    <li>Lokasi donor berada diwilayah DKI Jakarta</li>
->>>>>>> 39f5b83549dce9ea832e3924d03e79b717440045
                     <li>Jumlah calon donor 75 orang atau lebih</li>
                     <li>Menyediakan ruangan AC (suhu 19 - 20 °C) serta luasnya sesuai dengan banyaknya jumlah pendonor, bersih, cukup ventilasi, cukup cahaya dan teduh (tidak dibawah sinar matahari)</li>
                     <li>Menyediakan 6 buah meja untuk : Pendaftaran donor, pemeriksaan pendahuluan/HB, Pemeriksaan dokter, Administrasi, dan Meja konsumsi</li>
@@ -94,11 +78,7 @@
                 <ul>
                     <li>Membawa formulir permintaan darah (rangkap 5 dari RS yang telah ditanda tangani oleh dokter yang bertanggung jawab dan distampel RS)</li>
                     <li>Membawa Sampel darah pasien menggunakan cool box</li>
-<<<<<<< HEAD
                     <li>Bagi pasien yang berdomisili di Kabupaten Indramayu harap melampirkan foto kopi KK dan foto kopi KTP (untuk bayi menggunakan KTP orang tua dan surat keterangan lahir/Akte)</li>
-=======
-                    <li>Bagi pasien yang berdomisili di DKI Jakarta harap melampirkan foto kopi KK dan foto kopi KTP (untuk bayi menggunakan KTP orang tua dan surat keterangan lahir/Akte)</li>
->>>>>>> 39f5b83549dce9ea832e3924d03e79b717440045
                     <li>Formulir permintaan darah dan sampel darah diberikan kepada petugas kami di Loket A</li>
                     <li>Lama pemeriksaan ± 2 jam</li>
                 </ul>

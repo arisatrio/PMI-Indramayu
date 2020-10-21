@@ -77,11 +77,7 @@
         <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
           <h2>Syarat-syarat pendonor darah</h2>
-<<<<<<< HEAD
             <p class="lead mb-0 text-align:justify">
-=======
-            <p class="lead mb-0">
->>>>>>> 39f5b83549dce9ea832e3924d03e79b717440045
               1. Umur 17 – 60 tahun ( Pada usia 17 tahun diperbolehkan menjadi donor bila mendapat ijin tertulis dari orangtua. Sampai usia tahun donor masih dapat menyumbangkan darahnya dengan jarak penyumbangan 3 bulan atas pertimbangan dokter)<br>
               2. Berat badan minimum 45 kg <br>
               3. Temperatur tubuh : 36,6 – 37,5o C (oral) <br>
@@ -98,11 +94,7 @@
         <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
         <div class="col-lg-6 my-auto showcase-text">
           <h2>Seseorang tidak boleh menjadi pendonor darah pada keadaan : </h2>
-<<<<<<< HEAD
             <p class="lead mb-0 text-align:justify">
-=======
-            <p class="lead mb-0">
->>>>>>> 39f5b83549dce9ea832e3924d03e79b717440045
               1. Pernah menderita hepatitis B. <br>
               2. Dalam jangka waktu 6 bulan sesudah kontak erat dengan penderita hepatitis. <br>
               3. Dalam jangka waktu 6 bulan sesudah transfusi. <br>
@@ -133,11 +125,7 @@
         <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
           <h2>Manfaat Donor Darah</h2>
-<<<<<<< HEAD
             <p class="lead mb-0 "style="text-align:justify">
-=======
-            <p class="lead mb-0">
->>>>>>> 39f5b83549dce9ea832e3924d03e79b717440045
               1. Dapat memeriksakan kesehatan secara berkala 3 bulan sekali seperti tensi, Lab Uji Saring (HIV, Hepatitis B, C, Sifilis dan Malaria).<br>
               2. Mendapatkan piagam penghargaan sesuai dengan jumlah menyumbang darahnya antara lain 10, 25, 50, 75, 100 kali.<br>
               3. Donor darah 100 kali mendapat penghargaan Satya Lencana Kebaktian Sosial dari Pemerintah.<br>

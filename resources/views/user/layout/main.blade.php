@@ -34,17 +34,7 @@
                         <img src="{{ asset('/img/Logo-PMI-im.png') }}" class="navbar-brand" width="100%" height="80" class="d-inline-block align-top" alt="" >
                     </a>
                 </div>
-<<<<<<< HEAD
                
-=======
-                <div class="col-6 d-flex-justify-content-center">
-                    <p class=" mb-0" style="text-align: right;">
-                        Markas PMI Kota Medan <br>
-                        Jl. Palang Merah No.17 Medan - 20151<br>
-                        Phone : +6261 4567638
-                    </p>
-                </div>
->>>>>>> 39f5b83549dce9ea832e3924d03e79b717440045
             </div>
         </div>
     </div>
@@ -104,19 +94,11 @@
                     <div class="col-lg-6 h-100 text-center text-lg-left text-white my-auto">
                         <ul class="list-inline mb-2">
                             <li class="list-inline-item">
-<<<<<<< HEAD
                                 <a href="{{ route('profil') }}"class="text-white">About</a>
                             </li>
                             <li class="list-inline-item">&sdot;</li>
                             <li class="list-inline-item">
                                 <a href="{{ route('hubungi-kami') }}" class="text-white">Contact</a>
-=======
-                                <a href="#" class="text-white">About</a>
-                            </li>
-                            <li class="list-inline-item">&sdot;</li>
-                            <li class="list-inline-item">
-                                <a href="#" class="text-white">Contact</a>
->>>>>>> 39f5b83549dce9ea832e3924d03e79b717440045
                             </li>
                             <li class="list-inline-item">&sdot;</li>
                             <li class="list-inline-item">
@@ -132,11 +114,7 @@
                     <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item mr-3">
-<<<<<<< HEAD
                             <a href="https://www.facebook.com/pages/PMI-Kabupaten-Indramayu/144454002617502" class="text-white">
-=======
-                            <a href="#" class="text-white">
->>>>>>> 39f5b83549dce9ea832e3924d03e79b717440045
                                 <i class="fab fa-facebook fa-2x fa-fw"></i>
                             </a>
                             </li>
