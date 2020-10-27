@@ -74,7 +74,7 @@
     <div class="container-fluid p-0">
       <div class="row no-gutters">
 
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/donor3.jpg');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
           <h2>Syarat-syarat pendonor darah</h2>
             <p class="lead mb-0 text-align:justify">
@@ -91,8 +91,8 @@
         </div>
       </div>
       <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
-        <div class="col-lg-6 my-auto showcase-text">
+        <div class="col-lg-6 text-white showcase-img" style="width:100px;height:1000px; background-image: url('img/donor3.jpg');"></div>
+        <div class="col-lg-6">
           <h2>Seseorang tidak boleh menjadi pendonor darah pada keadaan : </h2>
             <p class="lead mb-0 text-align:justify">
               1. Pernah menderita hepatitis B. <br>
@@ -122,7 +122,7 @@
         </div>
       </div>
       <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
+        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/donor4.png');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
           <h2>Manfaat Donor Darah</h2>
             <p class="lead mb-0 "style="text-align:justify">

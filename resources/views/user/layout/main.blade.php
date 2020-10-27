@@ -22,7 +22,14 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/landing-page.min.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" integrity="sha512-63+XcK3ZAZFBhAVZ4irKWe9eorFG0qYsy2CaM5Z+F3kUn76ukznN0cp4SArgItSbDFD1RrrWgVMBY9C/2ZoURA==" crossorigin="anonymous" />
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js" integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFaioypzbDOQykoRg==" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -65,7 +72,7 @@
                             Formulir
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('permintaan-mobil-donor') }}">Formulir Permintaan Mobil Unit Donor</a>
+                            <a class="dropdown-item" href="{{ route('pengajuan-event-donor') }}">Formulir Pengajuan Event Donor Darah</a>
                             <a class="dropdown-item" href="{{ route('registrasi-donor') }}">Formulir Registrasi Donor</a>
                             <a class="dropdown-item" href="{{ route('donor-rhesus-negatif') }}">Formulir Donor Rhesus Negatif</a>
                             <a class="dropdown-item" href="{{ route('komunikasi') }}">Formulir Komunikasi (Pertanyaan & Saran)</a>
@@ -119,12 +126,17 @@
                             </a>
                             </li>
                             <li class="list-inline-item mr-3">
-                            <a href="#" class="text-white">
-                                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                            <a href="https://api.whatsapp.com/send?phone=+6289691030555" class="text-white">
+                               <i class="fab fa-whatsapp fa-2x fa-fw"></i>
                             </a>
                             </li>
                             <li class="list-inline-item">
-                            <a href="#" class="text-white">
+                            <a href="tel:+6289691030555" class="text-white">
+                            <i class="fas fa-phone-square-alt fa-2x fa-fw"></i>
+                            </a>
+                            </li>
+                            <li class="list-inline-item">
+                            <a href="https://instagram.com/pmi_indramayu?igshid=du7zyuf9plmu" class="text-white">
                                 <i class="fab fa-instagram fa-2x fa-fw"></i>
                             </a>
                             </li>
@@ -133,10 +145,6 @@
                 </div>
             </div>
         </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

@@ -37,8 +37,7 @@
                 <p>(0234) 274644</p>
                 <p class="text-danger font-weight-bold">Layanan Pelanggan</p>
                 <p>info@utdpmikabindramayu.or.id</p>
-
-                <h1>GMAPS API LOKASI</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.5122194100513!2d108.32656876094683!3d-6.326530858574866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ebbfc20a2bb4b%3A0xd80a45ef9828e8e!2sKantor%20PMI%20Kab.%20Indramayu!5e0!3m2!1sid!2sid!4v1603315709695!5m2!1sid!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 <div class="bg-dark mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.2;"></div>
             </div>
             <div class="collapse" id="dua" >

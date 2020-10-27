@@ -70,11 +70,15 @@
                 <h4>Informasi Prosedur Donor</h4>
                 <div class="bg-danger mt-2 mb-2" style="height: 2px; width: 40%; opacity: 0.5;"></div>
                 <p class="text-danger">Jika Anda sudah memenuhi syarat untuk donor darah, yuk simak tahapan-tahapan dalam mendonorkan darah :</p>
-                <p>
-                    1. Tahap Registrasi
-                        <ul>Mengisi formulir pendaftaran dan kuisioner kesehatan</ul>
+                <p><ol>
+                    <li> Tahap Registrasi </li>
+                        <ul>
+                            <li>Mengisi formulir pendaftaran dan kuisioner kesehatan</li>
+                            </ul>
                     2. Tahap Pemeriksaan Pendahuluan
-                        <ul>Pengukuran berat badan</ul>
+                        <ul>
+                            <li>Pengukuran berat badan</li>
+                            </ul>
                         <ul>Pemeriksaan kadar haemoglobin darah</ul>
                         <ul>Pemeriksaan golongan darah bagi pendonor pemula</ul>
                     3. Tahap Pemeriksaan Kesehatan oleh Dokter
@@ -89,6 +93,7 @@
                         <ul>Mengambil kartu donor dan vitamin</ul>
                     6. Tahap Pemulihan
                         <ul>Pendonor dianjurkan untuk istirahat dan menikmati hidangan ringan yang kami sajikan</ul>
+                </ol>
                 </p>
                 <div class="bg-dark mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.2;"></div>
             </div>
