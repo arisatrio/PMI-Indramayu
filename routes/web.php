@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'user.index')->name('index');
 Route::view('/profil', 'user.profil')->name('profil');
 Route::view('/agenda', 'user.agenda')->name('agenda');
+Route::view('/agenda-detail', 'user.agenda-detail')->name('agenda-detail');
 Route::view('/informasi', 'user.informasi')->name('informasi'); //INFORMASI KEBUTUHAN DARAH DINAMIS
 Route::view('/pengajuan-event-donor', 'user.pengajuan-event-donor')->name('pengajuan-event-donor');
 Route::view('/registrasi-donor', 'user.registrasi-donor')->name('registrasi-donor');
@@ -24,3 +25,9 @@ Route::view('/donor-rhesus-negatif', 'user.donor-rhesus-negatif')->name('donor-r
 Route::view('/komunikasi', 'user.komunikasi')->name('komunikasi');
 Route::view('/hubungi-kami', 'user.hubungi-kami')->name('hubungi-kami');
 Route::view('/faq', 'user.faq')->name('faq');
+
+//ADMIN
+Route::view('/admin', 'admin.index')->name('admin');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

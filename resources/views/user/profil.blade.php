@@ -26,6 +26,7 @@
                 </a>
                 <div class="bg-secondary" style="height: 1px; opacity: 0.2;"></div>
             </nav>
+            
         </div>
 
         <div class="col-sm-8 bg-transparent">

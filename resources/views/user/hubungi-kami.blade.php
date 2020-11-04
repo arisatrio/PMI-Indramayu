@@ -18,7 +18,7 @@
                 </a>
                 <div class="bg-secondary" style="height: 1px; opacity: 0.2;"></div>
                 <a class="nav-link text-muted mb-2" data-toggle="collapse" href="#dua" role="button" aria-expanded="false" aria-controls="dua">
-                    <i class="fa fa-angle-right mr-2"></i>Bagian Pendaftaran Donor di Mobil Unit
+                    <i class="fa fa-angle-right mr-2"></i>Bagian Pengajuan Event Donor Darah
                 </a>
                 <div class="bg-secondary" style="height: 1px; opacity: 0.2;"></div>
                 <a class="nav-link text-muted mb-2" data-toggle="collapse" href="#tiga" role="button" aria-expanded="false" aria-controls="tiga">
@@ -31,6 +31,7 @@
             <div class="collapsed" id="satu" >
                 <h4>PMI Kab. Indramayu</h4>
                 <div class="bg-danger mt-2 mb-2" style="height: 2px; width: 35%; opacity: 0.5;"></div>
+                <img alt="PMI-Im" src="img/Logo-PMI-im.png" height="200px" width="750px" />
                 <p class="text-danger font-weight-bold">Alamat</p>
                 <p>Jl. Yos Sudarso, Margadadi, Kec. Indramayu, Kabupaten Indramayu, Jawa Barat 45211</p>
                 <p class="text-danger font-weight-bold">No. Telp / HP</p>
@@ -41,9 +42,9 @@
                 <div class="bg-dark mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.2;"></div>
             </div>
             <div class="collapse" id="dua" >
-                <h4>Bagian Pendaftaran Donor di Mobil Unit</h4>
+                <h4>Bagian Pengajuan Event Donor Darah ( EDD )</h4>
                 <div class="bg-danger mt-2 mb-2" style="height: 2px; width: 60%; opacity: 0.5;"></div>
-                <p class="text-danger">Penyumbangan Darah Melalui Mobil Unit (MU)</p>
+                <p class="text-danger">Penyumbangan Darah Melalui Event Donor Darah (EDD )</p>
                 <p class="font-weight-bold">Yang disiapkan oleh instansi/organisasi ialah :</p>
                 <ol>
                     <li>Lokasi donor berada diwilayah Kab. Indramayu</li>
@@ -54,19 +55,19 @@
                     <li>Tersedia wastafel/tisu basah antiseptik untuk membersihkan lengan donor</li>
                     <li>Menyediakan dispenser/air panas untuk konsumsi donor dan teh manis hangat bagi pedonor yang membutuhkan (pusing)</li>
                 </ol>
-                <p class="font-weight-bold">Pemasanan tanggal pelaksanaan MU :</p>
+                <p class="font-weight-bold">Pemasanan tanggal pelaksanaan EDD :</p>
                 <ol>
                     <li>Melalui himbauan yang dikirimkan oleh UTD</li>
-                    <li>Penyesuaian tanggal atau permintaan : Untuk hari kerja minimum 2-3 bulan sebelum pelaksanaan, untuk hari minggu disesuaikan dengan jadwal MU yang tersedia di PMI, untuk calon donor diatas 500, dikoordinasikan terlebih dahulu dengan seksi yang terkait</li>
-                    <li>Konfirmasi ulang perlu dilakukan 1 minggu sebelum pelaksanaan MU</li>
-                    <li>Bila terjadi pembatalan, mohon memberitahukan segera ke bagian Penjadwalan donor UTD PMI Provinsi DKI Jakarta</li>
+                    <li>Penyesuaian tanggal atau permintaan : Untuk hari kerja minimum 2-3 bulan sebelum pelaksanaan, untuk hari minggu disesuaikan dengan jadwal EDD yang tersedia di PMI, untuk calon donor diatas 500, dikoordinasikan terlebih dahulu dengan seksi yang terkait</li>
+                    <li>Konfirmasi ulang perlu dilakukan 1 minggu sebelum pelaksanaan EDD</li>
+                    <li>Bila terjadi pembatalan, mohon memberitahukan segera ke bagian Penjadwalan donor UTD PMI Kab. Indramayu</li>
                 </ol>
                 <p class="font-weight-bold">
                     Pelayanan Penjadwalan Mobil Unit<br>
                     Hari Senin – Jum’at<br>
                     Pukul 08.00 – 14.00<br>
                 </p>
-                <p class="font-weight-bold text-danger">ISI FORMULIR DI <a href="#" class="text-danger">SINI</a></p>
+                <p class="font-weight-bold text-danger">ISI FORMULIR DI <a href="{{ route('pengajuan-event-donor') }}" class="text-danger">SINI</a></p>
                 <div class="bg-dark mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.2;"></div>
             </div>
             <div class="collapse" id="tiga" >

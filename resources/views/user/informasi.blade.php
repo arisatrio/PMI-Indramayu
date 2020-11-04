@@ -75,24 +75,41 @@
                         <ul>
                             <li>Mengisi formulir pendaftaran dan kuisioner kesehatan</li>
                             </ul>
-                    2. Tahap Pemeriksaan Pendahuluan
+                    <li>Tahap Pemeriksaan Pendahuluan</li>
                         <ul>
                             <li>Pengukuran berat badan</li>
                             </ul>
-                        <ul>Pemeriksaan kadar haemoglobin darah</ul>
-                        <ul>Pemeriksaan golongan darah bagi pendonor pemula</ul>
-                    3. Tahap Pemeriksaan Kesehatan oleh Dokter
-                        <ul>Anamnesis</ul>
-                        <ul>Pemeriksaan tekanan darah</ul>
+                        <ul>
+                            <li>Pemeriksaan kadar haemoglobin darah</li>
+                            </ul>
+                        <ul>
+                            <li>Pemeriksaan golongan darah bagi pendonor pemula</li>
+                            </ul>
+                    <li>Tahap Pemeriksaan Kesehatan oleh Dokter</li>
+                        <ul>
+                            <li>Anamnesis</li>
+                            </ul>
+                        <ul>
+                            <li>Pemeriksaan tekanan darah</li>
+                            </ul>
                         <ul>Pemeriksaan fisik sederhana</ul>
-                    4. Tahap Pengambilan Darah Donor
-                        <ul>Cuci lengan donor</ul>
-                        <ul>Pengambilan darah</ul>
-                        <ul>Pengambilan sampel darah</ul>
-                    5. Tahap Administrasi
-                        <ul>Mengambil kartu donor dan vitamin</ul>
-                    6. Tahap Pemulihan
-                        <ul>Pendonor dianjurkan untuk istirahat dan menikmati hidangan ringan yang kami sajikan</ul>
+                    <li>Tahap Pengambilan Darah Donor</li>
+                        <ul>
+                            <li>Cuci lengan donor</li>
+                            </ul>
+                        <ul>
+                        <li>Pengambilan darah</li>
+                        </ul>
+                        <ul>
+                        <li>Pengambilan sampel darah</li>
+                        </ul>
+                    <li>Tahap Administrasi</li>
+                        <ul>
+                        <li>Mengambil kartu donor dan vitamin</li>
+                        </ul>
+                    <li>Tahap Pemulihan</li>
+                        <ul>
+                        <li>Pendonor dianjurkan untuk istirahat dan menikmati hidangan ringan yang kami sajikan</li></ul>
                 </ol>
                 </p>
                 <div class="bg-dark mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.2;"></div>

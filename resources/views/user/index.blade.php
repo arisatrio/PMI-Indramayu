@@ -75,49 +75,62 @@
       <div class="row no-gutters">
 
         <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/donor3.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+        <div class="col-lg-6 order-lg-1-mt-0 my-auto showcase-text">
           <h2>Syarat-syarat pendonor darah</h2>
-            <p class="lead mb-0 text-align:justify">
-              1. Umur 17 – 60 tahun ( Pada usia 17 tahun diperbolehkan menjadi donor bila mendapat ijin tertulis dari orangtua. Sampai usia tahun donor masih dapat menyumbangkan darahnya dengan jarak penyumbangan 3 bulan atas pertimbangan dokter)<br>
-              2. Berat badan minimum 45 kg <br>
-              3. Temperatur tubuh : 36,6 – 37,5o C (oral) <br>
-              4. Tekanan darah baik, yaitu: <br>
-              - Sistole = 110 – 160 mm Hg dan Diastole = 70 – 100 mm Hg <br>
-              5. Denyut nadi; Teratur 50 – 100 kali/ menit <br>
-              6. Hemoglobin <br>
-              - Wanita minimal = 12 gr % sedangkan Pria minimal = 12,5 gr % <br>
-              7. Jumlah penyumbangan pertahun paling banyak 5 kali, dengan jarak penyumbangan sekurang-kurangnya 3 bulan. Keadaan ini harus sesuai dengan keadaan umum donor.!
+            <p class="lead mb-0-mt-0">
+              <ol>
+              <li style="text-align:justify">Umur 17 – 60 tahun ( Pada usia 17 tahun diperbolehkan menjadi donor bila mendapat ijin tertulis dari orangtua. Sampai usia tahun donor masih dapat menyumbangkan darahnya dengan jarak penyumbangan 3 bulan atas pertimbangan dokter)</li><br>
+              <li>Berat badan minimum 45 kg</li><br>
+              <li>Temperatur tubuh : 36,6 – 37,5o C (oral)</li><br>
+              <li>Tekanan darah baik, yaitu:</li>
+                  <ul>
+                  <li>Sistole = 110 – 160 mm Hg</li>
+                  </ul>
+                  <ul>
+                  <li>Diastole = 70 – 100 mm Hg</li>
+                  </ul><br>
+              <li>Denyut nadi : Teratur 50 – 100 kali/ menit</li><br>
+              <li>Hemoglobin</li>
+                  <ul>
+                  <li>Wanita minimal = 12 gr %</li>
+                  </ul>
+                  <ul>
+                  <li>Pria minimal = 12,5 gr % </li>
+                  </ul><br>
+              <li style="text-align:justify">Jumlah penyumbangan pertahun paling banyak 5 kali, dengan jarak penyumbangan sekurang-kurangnya 3 bulan. Keadaan ini harus sesuai dengan keadaan umum donor.!</li>
+              </ol>
             </p>
         </div>
       </div>
       <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" style="width:100px;height:1000px; background-image: url('img/donor3.jpg');"></div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/donor2.jpg');"></div>
+        <div class="col-lg-6  my-auto showcase-text">
           <h2>Seseorang tidak boleh menjadi pendonor darah pada keadaan : </h2>
-            <p class="lead mb-0 text-align:justify">
-              1. Pernah menderita hepatitis B. <br>
-              2. Dalam jangka waktu 6 bulan sesudah kontak erat dengan penderita hepatitis. <br>
-              3. Dalam jangka waktu 6 bulan sesudah transfusi. <br>
-              4. Dalam jangka waktu 6 bulan sesudah tattoo/tindik telinga. <br>
-              5. Dalam jangka waktu 72 jam sesudah operasi gigi.<br>
-              6. Dalam jangka wktu 6 bulan sesudah operasi kecil.<br>
-              7. Dalam jangka waktu 12 bulan sesudah operasi besar.<br>
-              8. Dalam jangka waktu 24 jam sesudah vaksinasi polio, influenza, cholera, tetanus dipteria atau profilaksis.<br>
-              9. Dalam jangka waktu 2 minggu sesudah vaksinasi virus hidup parotitis epidemica, measles, tetanus toxin.<br>
-              10. Dalam jangka waktu 1 tahun sesudah injeksi terakhir imunisasi rabies therapeutic.<br>
-              11. Dalam jangka waktu 1 minggu sesudah gejala alergi menghilang.<br>
-              12. Dalam jangka waktu 1 tahun sesudah transpalantasi kulit.<br>
-              13. Sedang hamil dan dalam jangka waktu 6 bulan sesudah persalinan.<br>
-              14. Sedang menyusui.<br>
-              15. Ketergantungan obat.<br>
-              16. Alkoholisme akut dan kronik.<br>
-              17. Sifilis.<br>
-              18. Menderita tuberkulosa secara klinis.<br>
-              19. Menderita epilepsi dan sering kejang.<br>
-              20. Menderita penyakit kulit pada vena (pembuluh balik) yang akan ditusuk.<br>
-              21. Mempunyai kecenderungan perdarahan atau penyakit darah, misalnya, defisiensi G6PD, thalasemia, polibetemiavera.<br>
-              22. Seseorang yang termasuk kelompok masyarakat yang mempunyai resiko tinggi untuk mendapatkan HIV/AIDS (homoseks, morfinis, berganti-ganti pasangan seks, pemakai jarum suntik tidak steril).<br>
-              23. Pengidap HIV/ AIDS menurut hasil pemeriksaan pada saat donor darah.<br>
+            <p class="lead mb-0" style="text-align:justify">
+              <ol>
+                 <li>Pernah menderita hepatitis B. </li><br>
+                 <li style="text-align:justify">Dalam jangka waktu 6 bulan sesudah kontak erat dengan penderita hepatitis. </li><br>
+                 <li>Dalam jangka waktu 6 bulan sesudah transfusi. </li><br>
+                 <li>Dalam jangka waktu 6 bulan sesudah tattoo/tindik telinga. </li><br>
+                 <li>Dalam jangka waktu 72 jam sesudah operasi gigi.</li><br>
+                 <li>Dalam jangka wktu 6 bulan sesudah operasi kecil.</li><br>
+                 <li style="text-align:justify">Dalam jangka waktu 12 bulan sesudah operasi besar.</li><br>
+                 <li style="text-align:justify">Dalam jangka waktu 24 jam sesudah vaksinasi polio, influenza, cholera, tetanus dipteria atau profilaksis.</li><br>
+                 <li style="text-align:justify">Dalam jangka waktu 2 minggu sesudah vaksinasi virus hidup parotitis epidemica, measles, tetanus toxin.</li><br>
+                 <li style="text-align:justify">Dalam jangka waktu 1 tahun sesudah injeksi terakhir imunisasi rabies therapeutic.</li><br>
+                 <li style="text-align:justify">Dalam jangka waktu 1 minggu sesudah gejala alergi menghilang.</li><br>
+                 <li style="text-align:justify">Dalam jangka waktu 1 tahun sesudah transpalantasi kulit.</li><br>
+                 <li style="text-align:justify">Sedang hamil dan dalam jangka waktu 6 bulan sesudah persalinan.</li><br>
+                 <li style="text-align:justify">Sedang menyusui.</li><br>
+                 <li>Ketergantungan obat.</li><br>
+                 <li>Alkoholisme akut dan kronik.</li><br>
+                 <li>Sifilis.</li><br>
+                 <li>Menderita tuberkulosa secara klinis.</li><br>
+                 <li style="text-align:justify">Menderita epilepsi dan sering kejang.</li><br>
+                 <li style="text-align:justify">Menderita penyakit kulit pada vena (pembuluh balik) yang akan ditusuk.</li><br>
+                 <li style="text-align:justify">Mempunyai kecenderungan perdarahan atau penyakit darah, misalnya, defisiensi G6PD, thalasemia, polibetemiavera.</li><br>
+                 <li style="text-align:justify">Seseorang yang termasuk kelompok masyarakat yang mempunyai resiko tinggi untuk mendapatkan HIV/AIDS (homoseks, morfinis, berganti-ganti pasangan seks, pemakai jarum suntik tidak steril).</li><br>
+                 <li>Pengidap HIV/ AIDS menurut hasil pemeriksaan pada saat donor darah.</li><br>
             </p>
         </div>
       </div>
@@ -125,11 +138,13 @@
         <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/donor4.png');"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
           <h2>Manfaat Donor Darah</h2>
-            <p class="lead mb-0 "style="text-align:justify">
-              1. Dapat memeriksakan kesehatan secara berkala 3 bulan sekali seperti tensi, Lab Uji Saring (HIV, Hepatitis B, C, Sifilis dan Malaria).<br>
-              2. Mendapatkan piagam penghargaan sesuai dengan jumlah menyumbang darahnya antara lain 10, 25, 50, 75, 100 kali.<br>
-              3. Donor darah 100 kali mendapat penghargaan Satya Lencana Kebaktian Sosial dari Pemerintah.<br>
-              4. Merupakan bagian dari ibadah.<br>
+            <p class="lead mb-5 "style="text-align:justify">
+            <ol>
+              <li style="text-align:justify">Dapat memeriksakan kesehatan secara berkala 3 bulan sekali seperti tensi, Lab Uji Saring (HIV, Hepatitis B, C, Sifilis dan Malaria).</li><br>
+              <li style="text-align:justify">Mendapatkan piagam penghargaan sesuai dengan jumlah menyumbang darahnya antara lain 10, 25, 50, 75, 100 kali.</li><br>
+              <li style="text-align:justify">Donor darah 100 kali mendapat penghargaan Satya Lencana Kebaktian Sosial dari Pemerintah.</li><br>
+              <li style="text-align:justify">Merupakan bagian dari ibadah.</li><br>
+            </ol>
             </p>
         </div>
       </div>
