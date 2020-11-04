@@ -33,144 +33,101 @@
         </div>
         <div class="col-sm-8">
             <form>
-            <div class="collapsed" id="tiga" >
-            <h4>Formulir Donor Darah</h4>
-            <div class="bg-danger mt-2 mb-4" style="height: 2px; width: 83%; opacity: 0.5;"></div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Kode Donor</label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="kodedonor" placeholder="Kode Donor">
+                <h4>Formulir Donor Darah</h4>
+                <div class="bg-danger mt-2 mb-4" style="height: 2px; width: 83%; opacity: 0.5;"></div>
+                <div class="form-group row">
+                    <label for="nik" class="col-sm-3 col-form-label">No. KTP/SIM</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="nik" id="nik" placeholder="No. KTP/SIM" required>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">No. KTP/SIM</label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="ktpsim" placeholder="No. KTP/SIM">
+                <div class="form-group row">
+                    <label for="nama" class="col-sm-3 col-form-label">Nama Lengkap</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Lengkap" required>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Nama Lengkap</label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="namalengkap" placeholder="Nama Lengkap">
+                <div class="form-group row">
+                    <label for="alamat" class="col-sm-3 col-form-label">Alamat </label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Alamat"required>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Alamat </label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="alamat" placeholder="Alamat ">
+                <div class="form-group row">
+                    <label for="kecamatan" class="col-sm-3 col-form-label">Kecamatan</label>
+                    <div class="col-sm-9">
+                        <select name="kecamatan" id="kecamatan" class="form-control" required>
+                            <option selected disabled>--Pilih--</option>
+                            @foreach($data as $datas)
+                            <option value="{{ $datas['name'] }}">{{ $datas['name'] }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Kelurahan</label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="kelurahan" placeholder="Kelurahan">
+                <div class="form-group row">
+                    <label for="kelurahan" class="col-sm-3 col-form-label">Kelurahan</label>
+                    <div class="col-sm-9">
+                        <select name="kelurahan" id="kelurahan" class="form-control" required>
+                            <option selected disabled>--Pilih--</option>
+                            <!--  -->
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label"> Kecamatan</label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="kecamatan" placeholder=" Kecamatan">
+                <div class="form-group row">
+                    <label for="jenis_kelamin" class="col-sm-3 col-form-label">Jenis Kelamin</label>
+                    <div class="col-sm-4">
+                        <select name="jenis_kelamin" id="jenis_kelamin" class="form-control" required>
+                            <option selected disabled>--Pilih--</option>
+                            <option value="Laki-laki">Laki-Laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Kode Pos</label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="kodepos" placeholder="Kode Pos">
+                <div class="form-group row">
+                    <label for="tempat_lahir" class="col-sm-3 col-form-label">Tempat Lahir</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="tempat_lahir" id="tempatlahir" placeholder="Tempat Lahir" required>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Kode Donor</label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="kodedonor" placeholder="Kode Donor">
+                <div class="form-group row">
+                    <label for="tanggal_lahir" class="col-sm-3 col-form-label">Tanggal Lahir</label>
+                    <div class="col-sm-4">
+                        <input type="date" class="form-control" name="tanggal_lahir" id="tanggal_lahir" required>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Jenis Kelamin</label>
-                <div class="col-sm-4">
-                    <select id="inputState" class="form-control">
-                        <option selected>Pilih</option>
-                        <option>Laki-Laki</option>
-                        <option>Perempuan</option>
-                    </select>
-               </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Tempat Lahir</label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="tempatlahir" placeholder="Tempat Lahir">
+                <div class="form-group row">
+                    <label for="pekerjaan" class="col-sm-3 col-form-label">Pekerjaan</label>
+                    <div class="col-sm-9">
+                        <select name="pekerjaan" id="pekerjaan" class="form-control" required>
+                            <option selected disabled>--Pilih--</option>
+                            <option value="TNI / POLRI">TNI / POLRI</option>
+                            <option value="Pegawai Negeri / Swasta">Pegawai Negeri / Swasta</option>
+                            <option value="Petani / Buruh">Petani / Buruh</option>
+                            <option value="Wiraswasta">Wiraswasta</option>
+                            <option value="Mahasiswa / Pelajar">Mahasiswa / Pelajar</option>
+                            <option value="Pedagang">Pedagang</option>
+                            <option value="Ibu Rumah Tangga">Ibu Rumah Tangga</option>
+                            <option value="Lain-lain">Lain-lain</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Tanggal Lahir</label>
-                <div class="col-sm-4">
-                <input type="date" class="form-control" id="tgllahir">
+                <div class="form-group row">
+                    <label for="status" class="col-sm-3 col-form-label">Status Nikah</label>
+                    <div class="col-sm-9">
+                        <select name="status" id="status" class="form-control" required>
+                            <option selected disabeled>--Pilih--</option>
+                            <option value="Nikah">Nikah</option>
+                            <option value="Belum Nikah">Belum Nikah</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Pekerjaan</label>
-                <div class="col-sm-9">
-                    <select id="inputState" class="form-control">
-                        <option selected>Pilih</option>
-                        <option>BUMN</option>
-                        <option>Pegawai Negeri</option>
-                        <option>Pegawai Swasta</option>
-                        <option>POLRI</option>
-                        <option>TNI</option>
-                        <option>Mahasiswa</option>
-                        <option>Pelajar</option>
-                        <option>Pedagang</option>
-                        <option>Wiraswasta</option>
-                        <option>Petani/Buruh</option>
-                        <option>Lain-lain</option>
-                    </select>
-                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Nama Ibu Kandung</label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="namaibukdg" placeholder="Nama Ibu Kandung">
+                <div class="form-group row">
+                    <label for="nohp" class="col-sm-3 col-form-label">Nomor Telepon</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="nohp" id="nohp" placeholder="No Telepon" required>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Status Nikah</label>
-                <div class="col-sm-9">
-                    <select id="inputState" class="form-control">
-                        <option selected>Pilih</option>
-                        <option>Nikah</option>
-                        <option>Belum Nikah</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Golongan Darah</label>
-                <div class="col-sm-9">
-                    <select id="inputState" class="form-control">
-                        <option selected>Pilih</option>
-                        <option>A</option>
-                        <option>AB</option>
-                        <option>B</option>
-                        <option>O</option>
-                    </select>
-               </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Rhesus</label>
-                <div class="col-sm-9">
-                    <select id="inputState" class="form-control">
-                        <option selected>Pilih</option>
-                        <option>Positif</option>
-                        <option>Negatif</option>
-                    </select>
-               </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Nomor Telepon</label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="notlp" placeholder="No Telepon">
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary col-md-3 float-right">Daftar</button>
-            </div>
+                <button type="submit" class="btn btn-primary col-md-2 float-right">Daftar</button>
             </form>
         </div>
     </div>

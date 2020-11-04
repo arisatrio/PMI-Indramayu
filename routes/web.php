@@ -20,14 +20,18 @@ Route::view('/agenda', 'user.agenda')->name('agenda');
 Route::view('/agenda-detail', 'user.agenda-detail')->name('agenda-detail');
 Route::view('/informasi', 'user.informasi')->name('informasi'); //INFORMASI KEBUTUHAN DARAH DINAMIS
 Route::view('/pengajuan-event-donor', 'user.pengajuan-event-donor')->name('pengajuan-event-donor');
-Route::view('/registrasi-donor', 'user.registrasi-donor')->name('registrasi-donor');
+//Route::view('/registrasi-donor', 'user.registrasi-donor')->name('registrasi-donor');
 Route::view('/donor-rhesus-negatif', 'user.donor-rhesus-negatif')->name('donor-rhesus-negatif');
 Route::view('/komunikasi', 'user.komunikasi')->name('komunikasi');
 Route::view('/hubungi-kami', 'user.hubungi-kami')->name('hubungi-kami');
 Route::view('/faq', 'user.faq')->name('faq');
 
 //ADMIN
-Route::view('/admin', 'admin.index')->name('admin');
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => 'auth'], function(){
+    Route::view('/admin', 'admin.index')->name('admin'); //dashboard controller
+});
+
+Route::get('/wilayah', [App\Http\Controllers\WilayahController::class, 'index'])->name('wilayah');
+Route::get('/registrasi-donor', [App\Http\Controllers\WilayahController::class, 'index'])->name('registrasi-donor');

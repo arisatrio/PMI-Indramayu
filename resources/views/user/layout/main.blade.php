@@ -147,5 +147,8 @@
         </footer>
 
 </body>
-
+<script>
+    $("input[required], select[required]").attr("oninvalid", "this.setCustomValidity('Form wajib diisi!')");
+    $("input[required], select[required]").attr("oninput", "setCustomValidity('')");
+</script>
 </html>
