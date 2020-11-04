@@ -32,7 +32,7 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function(){
     Route::view('/admin', 'admin.index')->name('admin'); //dashboard controller
 });
-//dde
+//ddejgj
 
 Route::get('/wilayah', [App\Http\Controllers\WilayahController::class, 'index'])->name('wilayah');
 Route::get('/registrasi-donor', [App\Http\Controllers\WilayahController::class, 'index'])->name('registrasi-donor');
