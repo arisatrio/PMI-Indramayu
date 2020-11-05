@@ -58,8 +58,8 @@
                     <div class="col-sm-9">
                         <select name="kecamatan" id="kecamatan" class="form-control" required>
                             <option selected disabled>--Pilih--</option>
-                            @foreach($data as $datas)
-                            <option value="{{ $datas['name'] }}">{{ $datas['name'] }}</option>
+                            @foreach($kec as $id => $kec1)
+                            <option value="{{ $id }}">{{ $kec1 }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -86,7 +86,7 @@
                 <div class="form-group row">
                     <label for="tempat_lahir" class="col-sm-3 col-form-label">Tempat Lahir</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="tempat_lahir" id="tempatlahir" placeholder="Tempat Lahir" required>
+                        <select class="form-control" name="tempat_lahir" id="tempat_lahir" placeholder="Tempat Lahir" required></select>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -132,5 +132,41 @@
         </div>
     </div>
 </div>
+
+
+<script>
+$(function () {
+    $('#kecamatan').on('change', function () {
+        axios.post('{{ route('kel') }}', {id: $(this).val()})
+            .then(function (response) {
+                $('#kelurahan').empty();
+
+                $.each(response.data, function (id, name) {
+                    $('#kelurahan').append(new Option(name, id))
+                })
+            });
+    });
+});
+
+$('#tempat_lahir').select2({
+    placeholder: 'Tempat Lahir',
+    ajax: {
+        url: '/tempat_lahir',
+        dataType: 'json',
+        delay: 250,
+        processResults: function (data) {
+            return {
+            results:  $.map(data, function (item) {
+                return {
+                text: item.name,
+                id: item.id
+                }
+            })
+            };
+        },
+    cache: true
+    }
+});
+</script>
 
 @endsection

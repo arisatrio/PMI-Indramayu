@@ -34,5 +34,7 @@ Route::group(['middleware' => 'auth'], function(){
 });
 //ddejgj
 
-Route::get('/wilayah', [App\Http\Controllers\WilayahController::class, 'index'])->name('wilayah');
+//Route::get('/wilayah', [App\Http\Controllers\WilayahController::class, 'index'])->name('wilayah');
 Route::get('/registrasi-donor', [App\Http\Controllers\WilayahController::class, 'index'])->name('registrasi-donor');
+Route::post('/kel', [App\Http\Controllers\WilayahController::class, 'store'])->name('kel');
+Route::get('/kota', [App\Http\Controllers\WilayahController::class, 'loadData']);
