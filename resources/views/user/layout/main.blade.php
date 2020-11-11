@@ -76,8 +76,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('pengajuan-event-donor') }}">Formulir Pengajuan Event Donor Darah</a>
                             <a class="dropdown-item" href="{{ route('registrasi-donor') }}">Formulir Registrasi Donor</a>
-                            <a class="dropdown-item" href="{{ route('donor-rhesus-negatif') }}">Formulir Donor Rhesus Negatif</a>
-                            <a class="dropdown-item" href="{{ route('komunikasi') }}">Formulir Komunikasi (Pertanyaan & Saran)</a>
                         </div>
                     </li>
                     <li class="nav-item">

@@ -32,36 +32,31 @@
             </nav>
         </div>
         <div class="col-sm-8">
-            <form>
-            <div class="collapsed" id="tiga" >
-            <h4>Formulir Donor Darah</h4>
-            <div class="bg-danger mt-2 mb-4" style="height: 2px; width: 83%; opacity: 0.5;"></div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Nama </label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="nama" placeholder="Nama">
+            <form method="POST" action="/komunikasi">
+                @csrf
+                <div class="collapsed" id="tiga">
+                <h4>Kirim Pertanyaan atau Saran</h4>
+                <div class="bg-danger mt-2 mb-4" style="height: 2px; width: 83%; opacity: 0.5;"></div>
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Nama Anda</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="Nama">
+                        @error('nama')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Email</label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="email" placeholder="Email">
+                <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Pertanyaan atau Saran</label>
+                    <div class="col-sm-9">
+                        <textarea type="text" name="isi_komunikasi" rows="10" class="form-control @error('isi_komunikasi') is-invalid @enderror" id="isi_komunikasi" placeholder="Tulis Pertanyaan atau Saran Anda..."></textarea>
+                        @error('isi_komunikasi')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">No. Tlp / HP</label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control" id="ntlph" placeholder="No. Tlp / HP">
+                <button type="submit" class="btn btn-primary col-md-2 float-right">Kirim</button>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-3 col-form-label">Pertanyaan</label>
-                <div class="col-sm-9">
-                <textarea type="text" class="form-control" id="pertanyaan" placeholder="Pertanyaan"></textarea>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary col-md-3 float-right">Kirim Pertanyaan</button>
-            </div>
             </form>
         </div>
     </div>
