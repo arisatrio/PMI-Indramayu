@@ -11,6 +11,10 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    public function berita(){
+        return $this->hasMany('Berita');
+    }
+
     /**
      * The attributes that are mass assignable.
      *

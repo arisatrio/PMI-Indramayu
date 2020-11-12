@@ -18,12 +18,17 @@
     <link href="{{ asset('fa/css/all.min.css') }}" rel="stylesheet" type="text/css">
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link rel="icon" href="{{ asset('/img/logo-pmi.png') }}">
-    
-    
+
+    <link href="https://https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
     <title>@yield('title')</title>
 </head>
 <body id="page-top">
@@ -33,14 +38,14 @@
     <!-- Sidebar -->
     <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('admin/dashboard') }}">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}">
           <img src="{{ asset('/img/logo-pmi.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
           <div class="sidebar-brand-text mx-3">PMI Indramayu</div>
         </a>
         <hr class="sidebar-divider my-0">
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{ route('admin.dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
         </li>
@@ -79,23 +84,23 @@
                 <span>Agenda</span>
             </a>
             <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-              <div class="bg-white py-2 collapse-inner rounded">
-                  <a class="collapse-item" href="">Pengajuan Event</a>
-                  <a class="collapse-item" href="">Data </a>
-              </div>
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="">Pengajuan Event</a>
+                    <a class="collapse-item" href="">Data </a>
+                </div>
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                <i class="fas fa-envelope"></i>
-                <span>Komunikasi</span>
+            <a class="nav-link" href="{{ route('admin.berita') }}" >
+                <i class="fas fa-newspaper"></i>
+                <span>Berita</span>
             </a>
-            <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="">Pertanyaan</a>
-                    <a class="collapse-item" href="">Saran</a>
-                </div>
-            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.komunikasi') }}" >
+                <i class="fas fa-envelope"></i>
+                <span>Pertanyaan dan Saran</span>
+            </a>
         </li>
         <hr class="sidebar-divider d-none d-md-block">
     </ul>
@@ -148,6 +153,7 @@
         <!-- Begin Page Content -->
         @yield('container')
         <!-- End of Page Content -->
+        
         <footer class="sticky-footer">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
@@ -168,33 +174,37 @@
                     </button>
                 </div>
                 <div class="modal-footer">
-                  <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                  <a class="btn btn-primary" href="{{ route('logout') }}"
-                      onclick="event.preventDefault();
-                                      document.getElementById('logout-form').submit();">
-                      {{ __('Logout') }}
-                  </a>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                      @csrf
-                  </form>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <a class="btn btn-primary" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </div>
             </div>
         </div>
     </div>    
 
-    <script>
-        bsCustomFileInput.init()
-
-        var btn = document.getElementById('btnResetForm')
-        var form = document.querySelector('form')
-        btn.addEventListener('click', function () {
-            form.reset()
-        })
-    </script>
     <Script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
-        })
+        });
+        
+        function goBack() {
+            window.history.back();
+        }
     </Script>
+    <script>
+        $(document).ready( function () {
+            $('#example').DataTable({
+                searching: false,
+                paging: false,
+                info: false
+            });
+        } );
+    </script>
 </body>
 </html>
