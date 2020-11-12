@@ -47,6 +47,15 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Perihal</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="tentang_komunikasi" class="form-control @error('tentang_komunikasi') is-invalid @enderror" id="tentang_komunikasi" placeholder="Perihal">
+                        @error('tentang_komunikas')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-group row">
                     <label for="colFormLabel" class="col-sm-3 col-form-label">Pertanyaan atau Saran</label>
                     <div class="col-sm-9">
                         <textarea type="text" name="isi_komunikasi" rows="10" class="form-control @error('isi_komunikasi') is-invalid @enderror" id="isi_komunikasi" placeholder="Tulis Pertanyaan atau Saran Anda..."></textarea>

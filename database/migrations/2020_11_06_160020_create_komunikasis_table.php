@@ -16,6 +16,7 @@ class CreateKomunikasisTable extends Migration
         Schema::create('komunikasis', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->longText('tentang_komunikasi');
             $table->longText('isi_komunikasi');
             $table->longText('isi_balasan')->nullable();
             $table->softDeletes();

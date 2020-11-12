@@ -51,13 +51,15 @@ class KomunikasiController extends Controller
         //STORE DATA
         $validatedData = $request->validate([
             'nama'           => 'required|max:50',
+            'tentang_komunikasi' => 'required',
             'isi_komunikasi' => 'required',
             'isi_balasan'    => 'nullable'
         ]);
 
         $komunikasi = Komunikasi::create([
-            'nama'              => $request->nama,
-            'isi_komunikasi'    => $request->isi_komunikasi
+            'nama'                  => $request->nama,
+            'tentang_komunikasi'    => $request->tentang_komunikasi,
+            'isi_komunikasi'        => $request->isi_komunikasi
         ]);
         $komunikasi->save();
         
@@ -106,7 +108,7 @@ class KomunikasiController extends Controller
         $komunikasi->isi_balasan = $request->isi_balasan;
         $komunikasi->save();
 
-        return redirect('/admin/komunikasi');
+        return redirect('/admin/komunikasi-arsip');
     }
 
     /**

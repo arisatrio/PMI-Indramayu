@@ -14,6 +14,7 @@ class Komunikasi extends Model
     protected $dates = ['deleted_at'];
     protected $fillable = [
         'nama',
+        'tentang_komunikasi',
         'isi_komunikasi',
         'isi_balasan'
     ];
