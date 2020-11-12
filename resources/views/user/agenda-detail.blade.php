@@ -1,6 +1,6 @@
 @extends('user/layout/main')
 
-@section('title', 'Agenda | PMI Indramayu')
+@section('title', 'Detail Agenda | PMI Indramayu')
 
 @section('content')
 <div class="container">

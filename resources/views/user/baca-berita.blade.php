@@ -1,6 +1,6 @@
 @extends('user/layout/main')
 
-@section('title', 'Registrasir Donor | PMI Indramayu')
+@section('title', 'Baca Berita | PMI Indramayu')
 
 @section('content')
 

@@ -1,6 +1,6 @@
 @extends('user/layout/main')
 
-@section('title', 'PMI Indramayu')
+@section('title', 'Riwayat | PMI Indramayu')
 
 @section('content')
 <header class="masthead2 text-white ">
