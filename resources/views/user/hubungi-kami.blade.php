@@ -8,7 +8,7 @@
 
         <div class="col-sm-4">
             <div class="judul font-weight-bold" style="display: flex">
-                <i class="fa fa-plus fa-2x mr-2" style="color: red; display: inline-block;"></i><h2>Hubungi Kami</h2>
+                <i class="fas fa-phone-alt fa-2x mr-2" style="color: red; display: inline-block;"></i><h2>Hubungi Kami</h2>
             </div>
             <div class="bg-dark mt-2 mb-2" style="height: 2px; opacity: 0.5;"></div>
 
@@ -19,10 +19,6 @@
                 <div class="bg-secondary" style="height: 1px; opacity: 0.2;"></div>
                 <a class="nav-link text-muted mb-2" data-toggle="collapse" href="#dua" role="button" aria-expanded="false" aria-controls="dua">
                     <i class="fa fa-angle-right mr-2"></i>Bagian Pengajuan Event Donor Darah
-                </a>
-                <div class="bg-secondary" style="height: 1px; opacity: 0.2;"></div>
-                <a class="nav-link text-muted mb-2" data-toggle="collapse" href="#tiga" role="button" aria-expanded="false" aria-controls="tiga">
-                    <i class="fa fa-angle-right mr-2"></i>Bagian Layanan Pasien
                 </a>
                 <div class="bg-secondary" style="height: 1px; opacity: 0.2;"></div>
             </nav>
@@ -37,7 +33,7 @@
                 <p class="text-danger font-weight-bold">No. Telp / HP</p>
                 <p>(0234) 274644</p>
                 <p class="text-danger font-weight-bold">Layanan Pelanggan</p>
-                <p>info@utdpmikabindramayu.or.id</p>
+                <p>info@uddpmikabindramayu.or.id</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.5122194100513!2d108.32656876094683!3d-6.326530858574866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ebbfc20a2bb4b%3A0xd80a45ef9828e8e!2sKantor%20PMI%20Kab.%20Indramayu!5e0!3m2!1sid!2sid!4v1603315709695!5m2!1sid!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 <div class="bg-dark mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.2;"></div>
             </div>
@@ -57,10 +53,10 @@
                 </ol>
                 <p class="font-weight-bold">Pemasanan tanggal pelaksanaan EDD :</p>
                 <ol>
-                    <li>Melalui himbauan yang dikirimkan oleh UTD</li>
+                    <li>Melalui himbauan yang dikirimkan oleh UDD</li>
                     <li>Penyesuaian tanggal atau permintaan : Untuk hari kerja minimum 2-3 bulan sebelum pelaksanaan, untuk hari minggu disesuaikan dengan jadwal EDD yang tersedia di PMI, untuk calon donor diatas 500, dikoordinasikan terlebih dahulu dengan seksi yang terkait</li>
                     <li>Konfirmasi ulang perlu dilakukan 1 minggu sebelum pelaksanaan EDD</li>
-                    <li>Bila terjadi pembatalan, mohon memberitahukan segera ke bagian Penjadwalan donor UTD PMI Kab. Indramayu</li>
+                    <li>Bila terjadi pembatalan, mohon memberitahukan segera ke bagian Penjadwalan donor UDD PMI Kab. Indramayu</li>
                 </ol>
                 <p class="font-weight-bold">
                     Pelayanan Penjadwalan Mobil Unit<br>
@@ -68,21 +64,6 @@
                     Pukul 08.00 – 14.00<br>
                 </p>
                 <p class="font-weight-bold text-danger">ISI FORMULIR DI <a href="{{ route('pengajuan-event-donor') }}" class="text-danger">SINI</a></p>
-                <div class="bg-dark mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.2;"></div>
-            </div>
-            <div class="collapse" id="tiga" >
-                <h4>Bagian Layanan Pasien</h4>
-                <div class="bg-danger mt-2 mb-2" style="height: 2px; width: 35%; opacity: 0.5;"></div>
-                <p class="text-danger font-weight-bold">Membutuhkan darah?</p>
-                <p>Laboratorium pelayanan pasien diperuntukan bagi RS yang tidak memiliki bank darah. Berikut prosedur permintaan darah :</p>
-                <ul>
-                    <li>Membawa formulir permintaan darah (rangkap 5 dari RS yang telah ditanda tangani oleh dokter yang bertanggung jawab dan distampel RS)</li>
-                    <li>Membawa Sampel darah pasien menggunakan cool box</li>
-                    <li>Bagi pasien yang berdomisili di Kabupaten Indramayu harap melampirkan foto kopi KK dan foto kopi KTP (untuk bayi menggunakan KTP orang tua dan surat keterangan lahir/Akte)</li>
-                    <li>Formulir permintaan darah dan sampel darah diberikan kepada petugas kami di Loket A</li>
-                    <li>Lama pemeriksaan ± 2 jam</li>
-                </ul>
-                <p class="font-weight-bold text-danger">ISI FORMULIR DI <a href="#" class="text-danger">SINI</a></p>
                 <div class="bg-dark mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.2;"></div>
             </div>
         </div>

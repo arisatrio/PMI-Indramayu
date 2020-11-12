@@ -67,6 +67,9 @@
                         <a class="nav-link" href="{{ route('agenda') }}">Agenda</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('berita') }}">Berita</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('informasi') }}">Informasi</a>
                     </li>
                     <li class="nav-item dropdown">
@@ -108,14 +111,6 @@
                             <li class="list-inline-item">&sdot;</li>
                             <li class="list-inline-item">
                                 <a href="{{ route('hubungi-kami') }}" class="text-white">Contact</a>
-                            </li>
-                            <li class="list-inline-item">&sdot;</li>
-                            <li class="list-inline-item">
-                                <a href="#" class="text-white">Terms of Use</a>
-                            </li>
-                            <li class="list-inline-item">&sdot;</li>
-                            <li class="list-inline-item">
-                                <a href="#" class="text-white">Privacy Policy</a>
                             </li>
                         </ul>
                         <p class="text-muted small mb-4 mb-lg-0">&copy; PMI Indramayu. All Rights Reserved.</p>

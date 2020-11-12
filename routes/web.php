@@ -29,6 +29,8 @@ Route::view('/donor-rhesus-negatif', 'user.donor-rhesus-negatif')->name('donor-r
 Route::view('/komunikasi', 'user.komunikasi')->name('komunikasi');
 Route::view('/hubungi-kami', 'user.hubungi-kami')->name('hubungi-kami');
 Route::view('/faq', 'user.faq')->name('faq');
+Route::view('/cekriwayat', 'user.riwayat')->name('riwayat');
+Route::view('/berita','user.berita')->name('berita');
 
 //ADMIN
 Auth::routes();

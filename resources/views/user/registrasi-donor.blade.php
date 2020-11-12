@@ -7,13 +7,13 @@
     <div class="row mt-4 mb-4 pt-4 pb-4">
         <div class="col-sm-4">
             <div class="judul font-weight-bold" style="display: flex">
-                <i class="fa fa-plus fa-2x mr-2" style="color: red; display: inline-block;"></i><h2>FORMULIR</h2>
+                <i class="icon-pencil fa-2x mr-2" style="color: red; display: inline-block;"></i><h2>FORMULIR</h2>
             </div>
             <div class="bg-dark mt-2 mb-2" style="height: 2px; opacity: 0.5;"></div>
 
             <nav class="nav flex-column">
                 <a class="nav-link text-muted mb-2"  href="{{ route('pengajuan-event-donor') }}" >
-                    <i class="fa fa-angle-right mr-2"></i>Formulir Pengajuan Donor Darah
+                    <i class="fa fa-angle-right mr-2"></i>Formulir Pengajuan Event Donor Darah
                 </a>
                 <div class="bg-secondary" style="height: 1px; opacity: 0.2;"></div>
                 <a class="nav-link text-muted mb-2"  href="{{ route('registrasi-donor') }}" >
