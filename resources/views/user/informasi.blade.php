@@ -8,7 +8,7 @@
 
         <div class="col-sm-4">
             <div class="judul font-weight-bold" style="display: flex">
-                <i class="fa fa-plus fa-2x mr-2" style="color: red; display: inline-block;"></i><h2>INFORMASI</h2>
+                <i class="fas fa-info fa-2x mr-2" style="color: red; display: inline-block;"></i><h2>INFORMASI</h2>
             </div>
             <div class="bg-dark mt-2 mb-2" style="height: 2px; opacity: 0.5;"></div>
 
@@ -119,7 +119,7 @@
                 <div class="bg-danger mt-2 mb-2" style="height: 2px; width: 60%; opacity: 0.5;"></div>
                 <p class="text-danger">Prosedur Permintaan Darah</p>
                 <p style="text-align:justify">Yang menentukan pasient memerlukan darah adalah dokter yang merawat.</p>
-                <p style="text-align:justify">Formulir dan contoh darah dikirim ke Bank darah di rumah sakit atau ke laboratorium UTDD PMI Kabupaten Indramayu, apabila :persedian darah yang diminta oleh dokter yang merawat tidak ada di Bank darah rumah sakit tidak mempunyai bank darah.</p>
+                <p style="text-align:justify">Formulir dan contoh darah dikirim ke Bank darah di rumah sakit atau ke laboratorium UDD PMI Kabupaten Indramayu, apabila :persedian darah yang diminta oleh dokter yang merawat tidak ada di Bank darah rumah sakit tidak mempunyai bank darah.</p>
                 <p style="text-align:justify">Atas dasar permintaan tersebut diadakan pemeriksaan reaksi silang antara contoh darah donor dengan contoh darah pasien, yang memakan waktu lebih kurang 1-2 jam. Pemeriksaan ini mutlak harus dilakukan walaupun golongan darah pasient dengan golongan darah donor sama. Bila pada pemeriksaan silang tidak terdapat kelainan maka barulah darah donor diberikan kepada pasien. Bila pemeriksaan silang ditemukan kalainan atau ketidak cocokan perlu dilakukan pemeriksaan lanjutan untuk mencari sebab kelainan atau ketidakcocokan tersebut</p>
                 <div class="bg-dark mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.2;"></div>
             </div>

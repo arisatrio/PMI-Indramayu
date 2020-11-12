@@ -16,7 +16,7 @@
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto mt-5">
                 <div class="card mt-3">
                     <div class="card-body">
-                        <h5 class="card-title text-center">LOGIN</h5>
+                        <h5 class="card-title text-center"><i class="fas fa-user"></i> LOGIN</h5>
                         <hr>
                         <form action="{{ route('login') }}" method="POST">
                             {{ csrf_field() }}
@@ -31,16 +31,18 @@
                                     </div>
                                 @endif
                             <div class="form-label-group mb-3">
-                                <label for="email">{{ __('E-Mail') }}</label>
+                                <label for="email">{{ __('E-Mail') }}</label> <i class="far fa-envelope"></i>
                                 <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" placeholder="E-mail" required autocomplete="email" autofocus>
+                                
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             <div class="form-label-group mb-3">
-                                <label for="password">{{ __('Password') }}</label>
+                                <label for="password">{{ __('Password') }}</label> <i class="fas fa-key"></i>
                                 <input type="password" id="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" required autocomplete="current-password">
+                                
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

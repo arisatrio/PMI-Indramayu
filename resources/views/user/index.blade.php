@@ -37,7 +37,7 @@
             <div class="features-icons-icon d-flex">
               <i class="icon-calendar m-auto text-danger"></i>
             </div>
-            <a href="#" class="text-dark">
+            <a href="{{ route('agenda') }}" class="text-dark">
               <h3>JADWAL KEGIATAN DONOR DARAH</h3>
             </a>
             <p class="lead mb-0">Lihat Jadwal dan Lokasi Kegiatan Donor Darah</p>
@@ -46,7 +46,7 @@
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
-              <i class="icon-layers m-auto text-danger"></i>
+              <i class="fas fa-tint m-auto text-danger"></i>
             </div>
             <a href="#" class="text-dark">
               <h3>STOK DARAH</h3>
@@ -68,7 +68,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Image Showcases -->
   <section class="showcase">
     <div class="container-fluid p-0">

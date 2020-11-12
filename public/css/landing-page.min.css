@@ -21,3 +21,21 @@
     left: 0;
     opacity: 0.3;
   }
+  header.masthead2 {
+    position: relative;
+    background-color: #343a40;
+    background: url("../img/bg-masthead2.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  header.masthead2 .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }

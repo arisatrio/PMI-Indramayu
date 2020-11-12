@@ -7,7 +7,7 @@
     <div class="row mt-4 mb-4 pt-4 pb-4">
         <div class="col-sm-4">
             <div class="judul font-weight-bold" style="display: flex">
-                <i class="fa fa-plus fa-2x mr-2" style="color: red; display: inline-block;"></i><h2>FORMULIR</h2>
+                <i class="icon-pencil fa-2x mr-2" style="color: red; display: inline-block;"></i><h2>FORMULIR</h2>
             </div>
             <div class="bg-dark mt-2 mb-2" style="height: 2px; opacity: 0.5;"></div>
 
@@ -34,7 +34,7 @@
         <div class="col-sm-8">
             <form>
             <div class="collapsed" id="tiga" >
-            <h4>Formulir Donor Darah</h4>
+            <h4>Formulir Komunikasi (Pertanyaan & Saran)</h4>
             <div class="bg-danger mt-2 mb-4" style="height: 2px; width: 83%; opacity: 0.5;"></div>
             <div class="form-group row">
                 <label for="colFormLabel" class="col-sm-3 col-form-label">Nama </label>
