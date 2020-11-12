@@ -19,8 +19,12 @@ Route::get('/komunikasi', [App\Http\Controllers\KomunikasiController::class, 'cr
 Route::post('/komunikasi', [App\Http\Controllers\KomunikasiController::class, 'store']);
 
 Route::view('/', 'user.index')->name('index');
+//Route::get('/', [App\Http\Controllers\KomunikasiController::class, 'index']);
 Route::view('/profil', 'user.profil')->name('profil');
 Route::view('/agenda', 'user.agenda')->name('agenda');
+Route::get('/berita', [App\Http\Controllers\HomeController::class, 'indexBerita'])->name('berita');
+Route::get('/berita/read/{slug}', [App\Http\Controllers\HomeController::class, 'readBerita'])->name('read-berita');
+
 Route::view('/agenda-detail', 'user.agenda-detail')->name('agenda-detail');
 Route::view('/informasi', 'user.informasi')->name('informasi'); //INFORMASI KEBUTUHAN DARAH DINAMIS
 Route::view('/pengajuan-event-donor', 'user.pengajuan-event-donor')->name('pengajuan-event-donor');
@@ -30,7 +34,7 @@ Route::view('/komunikasi', 'user.komunikasi')->name('komunikasi');
 Route::view('/hubungi-kami', 'user.hubungi-kami')->name('hubungi-kami');
 Route::view('/faq', 'user.faq')->name('faq');
 Route::view('/cekriwayat', 'user.riwayat')->name('riwayat');
-Route::view('/berita','user.berita')->name('berita');
+//Route::view('/berita','user.berita')->name('berita');
 
 //ADMIN
 Auth::routes();

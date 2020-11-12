@@ -16,7 +16,7 @@ class Berita extends Model
         'penulis_id'
     ];
 
-    public function penulis(){
-        return $this->belongsTo('users', 'penulis_id');
+    public function user(){
+        return $this->belongsTo('App\Models\User', 'penulis_id');
     }
 }

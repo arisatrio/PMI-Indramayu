@@ -12,7 +12,7 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     public function berita(){
-        return $this->hasMany('Berita');
+        return $this->hasMany('App\Models\Berita');
     }
 
     /**
