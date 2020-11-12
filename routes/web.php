@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 //USER
+
+Route::get('/komunikasi', [App\Http\Controllers\KomunikasiController::class, 'create'])->name('komunikasi');
+Route::post('/komunikasi', [App\Http\Controllers\KomunikasiController::class, 'store']);
+
 Route::view('/', 'user.index')->name('index');
 Route::view('/profil', 'user.profil')->name('profil');
 Route::view('/agenda', 'user.agenda')->name('agenda');
@@ -30,11 +34,26 @@ Route::view('/berita','user.berita')->name('berita');
 
 //ADMIN
 Auth::routes();
-
 Route::group(['middleware' => 'auth'], function(){
-    Route::view('/admin', 'admin.index')->name('admin'); //dashboard controller
-});
-//d
+    Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware' => 'auth' ], function () {
+        Route::view('dashboard', 'admin.index')->name('dashboard'); //dashboard controller
 
-Route::get('/wilayah', [App\Http\Controllers\WilayahController::class, 'index'])->name('wilayah');
+        //MODUL BERITA
+        Route::get('berita', [App\Http\Controllers\BeritaController::class, 'index'])->name('berita'); //INDEX BERITA
+        Route::get('berita-baru', [App\Http\Controllers\BeritaController::class, 'create'])->name('berita-baru'); //BUAT BERITA
+        Route::post('berita-baru/store', [App\Http\Controllers\BeritaController::class, 'store'])->name('berita-baru-store'); //BUAT BERITA POST
+        Route::get('berita-edit/{id}', [App\Http\Controllers\BeritaController::class, 'edit'])->name('berita-edit'); //EDIT BERITA
+        Route::post('berita-edit/update/{id}', [App\Http\Controllers\BeritaController::class, 'update'])->name('berita-update'); //EDIT BERITA POST
+        Route::get('berita-edit/delete/{id}', [App\Http\Controllers\BeritaController::class, 'destroy'])->name('berita-hapus'); //HAPUS BERITA
+        //MODUL KOMUNIKASI
+        Route::get('komunikasi-baru', [App\Http\Controllers\KomunikasiController::class, 'index'])->name('komunikasi'); //INDEX BELUM DIBALAS
+        Route::get('komunikasi-arsip', [App\Http\Controllers\KomunikasiController::class, 'arsip'])->name('komunikasi-arsip'); //INDEX SUDAH DIBALAS
+        Route::get('komunikasi/lihat/{id}', [App\Http\Controllers\KomunikasiController::class, 'edit'])->name('komunikasi-lihat'); //LIHAT DAN BALAS
+        Route::delete('komunikasi/{id}', [App\Http\Controllers\KomunikasiController::class, 'destroy'])->name('komunikasi-hapus'); //HAPUS
+        Route::post('komunikasi/balas/{id}', [App\Http\Controllers\KomunikasiController::class, 'update'])->name('komunikasi-dibalas'); //POST BALAS
+    });
+});
+
 Route::get('/registrasi-donor', [App\Http\Controllers\WilayahController::class, 'index'])->name('registrasi-donor');
+Route::post('/kel', [App\Http\Controllers\WilayahController::class, 'store'])->name('kel');
+Route::get('/kota', [App\Http\Controllers\WilayahController::class, 'loadData']);
