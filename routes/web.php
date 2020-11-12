@@ -18,10 +18,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/komunikasi', [App\Http\Controllers\KomunikasiController::class, 'create'])->name('komunikasi');
 Route::post('/komunikasi', [App\Http\Controllers\KomunikasiController::class, 'store']);
 
+
 //Route::view('/', 'user.index')->name('index');
 Route::get('/', [App\Http\Controllers\CovidController::class, 'index'])->name('index');
+
+Route::view('/', 'user.index')->name('index');
+//Route::get('/', [App\Http\Controllers\KomunikasiController::class, 'index']);
+
 Route::view('/profil', 'user.profil')->name('profil');
 Route::view('/agenda', 'user.agenda')->name('agenda');
+Route::get('/berita', [App\Http\Controllers\HomeController::class, 'indexBerita'])->name('berita');
+Route::get('/berita/read/{slug}', [App\Http\Controllers\HomeController::class, 'readBerita'])->name('read-berita');
+
 Route::view('/agenda-detail', 'user.agenda-detail')->name('agenda-detail');
 Route::view('/informasi', 'user.informasi')->name('informasi'); //INFORMASI KEBUTUHAN DARAH DINAMIS
 Route::view('/pengajuan-event-donor', 'user.pengajuan-event-donor')->name('pengajuan-event-donor');
@@ -30,9 +38,14 @@ Route::view('/donor-rhesus-negatif', 'user.donor-rhesus-negatif')->name('donor-r
 Route::view('/komunikasi', 'user.komunikasi')->name('komunikasi');
 Route::view('/hubungi-kami', 'user.hubungi-kami')->name('hubungi-kami');
 Route::view('/faq', 'user.faq')->name('faq');
+
 Route::view('/cekriwayat', 'user.riwayat')->name('cekriwayat');
 Route::view('/berita','user.berita')->name('berita');
 Route::view('/stok-darah','user.stok-darah')->name('stok-darah');
+
+Route::view('/cekriwayat', 'user.riwayat')->name('riwayat');
+//Route::view('/berita','user.berita')->name('berita');
+
 
 //ADMIN
 Auth::routes();

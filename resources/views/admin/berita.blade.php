@@ -25,6 +25,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
+                        @if($berita != null)
                         <table class="table table-bordered table-hover">
                             <thead class="table-active">
                                 <tr>
@@ -56,6 +57,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        @endif
                     </div>
                 </div>
                 <hr>
