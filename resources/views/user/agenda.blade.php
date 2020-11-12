@@ -48,6 +48,7 @@
 
   <div class="bg-secondary mt-4 mb-2" style="height: 2px; width: 100%; opacity: 0.5;"></div>
 
+  <a href="{{ route('agenda-detail') }}">
   <div class="row mt-4">
     <div class="col-12">
       <div class="card shadow mb-5">
@@ -73,6 +74,7 @@
       </div>
     </div>
   </div>
+  </a>
   <div class="row mt-4">
     <div class="col-4">
       <div class="card shadow mb-5">

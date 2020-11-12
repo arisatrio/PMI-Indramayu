@@ -23,8 +23,8 @@ class CovidController extends Controller
             $response = $request->getBody()->getContents();
     
             $data = json_decode($response, TRUE);
-             
-            return view('',compact( 'data'));
+            
+            return view('user.index',compact('data'));
     
         }
         

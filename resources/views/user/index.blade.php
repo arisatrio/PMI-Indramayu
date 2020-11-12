@@ -48,7 +48,7 @@
             <div class="features-icons-icon d-flex">
               <i class="fas fa-tint m-auto text-danger"></i>
             </div>
-            <a href="#" class="text-dark">
+            <a href="{{ route('stok-darah') }}" class="text-dark">
               <h3>STOK DARAH</h3>
             </a>
             <p class="lead mb-0">Jumlah stok darah PMI Indramayu real-time</p>
@@ -68,10 +68,68 @@
       </div>
     </div>
   </section>
-  
-  <!-- Image Showcases -->
+
+  <!-- COVID -->
+  @foreach($data as $datas)
+    <div class="card">
+      <div class="card-header bg-danger text-white text-center">
+        <h3>KASUS COVID-19 INDONESIA REAL-TIME</h3>
+      </div>
+      <div class="row">
+          <div class="col-3">
+            <div class="card-body">
+              <div class="card" style="width: 16rem;">
+                <div class="card-body ">
+                <i class="fas fa-user-plus fa-3x float-right" style="opacity:0.5;"></i>
+                  <h2 class="card-text mb-4"><b>{{ $datas['positif'] }}</b></h2>
+                  <h5 class="card-title">TERKONFIRMASI</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card-body">
+              <div class="card" style="width: 16rem;">
+                <div class="card-body">
+                <i class="fas fa-user-md fa-3x float-right" style="opacity:0.5;"></i>
+                <h2 class="card-text mb-4"><b>{{ $datas['dirawat'] }}</b></h2>
+                  <h5 class="card-title">KASUS AKTIF</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-3">
+          <div class="card-body">
+            <div class="card" style="width: 16rem;">
+              <div class="card-body">
+              <i class="far fa-smile fa-3x float-right" style="opacity:0.5;"></i>
+                <h2 class="card-text mb-4"><b>{{ $datas['sembuh']}}</b></h2>
+                <h5 class="card-title">SEMBUH</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card-body">
+            <div class="card" style="width: 16rem;">
+              <div class="card-body">
+              <i class="fas fa-ribbon fa-3x float-right" style="opacity:0.5;"></i>
+                <h2 class="card-text mb-4"></b>{{ $datas['meninggal']}}</b></h2>
+                <h5 class="card-title">MENINGGAL</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" text-muted mb-2 text-center ">
+        <small>Sumber : kawalcorona.com</small>
+      </div>
+    </div >
+    @endforeach
+<!-- END COVID -->
+<!-- Informasi Donor -->
   <section class="showcase">
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 mt-5">
       <div class="row no-gutters">
 
         <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/donor3.jpg');"></div>
@@ -150,4 +208,33 @@
       </div>
     </div>
   </section>
+  <div class="container mt-3">
+  <div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  <!-- END Informasi Donor -->
 @endsection
