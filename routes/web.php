@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//USER
+//USERok
 
 Route::get('/komunikasi', [App\Http\Controllers\KomunikasiController::class, 'create'])->name('komunikasi');
 Route::post('/komunikasi', [App\Http\Controllers\KomunikasiController::class, 'store']);
