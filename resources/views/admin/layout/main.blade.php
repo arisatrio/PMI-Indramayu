@@ -79,16 +79,10 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+            <a class="nav-link" href="{{ route('admin.agenda') }}" >
                 <i class="fas fa-calendar-alt"></i>
                 <span>Agenda</span>
             </a>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="">Pengajuan Event</a>
-                    <a class="collapse-item" href="">Data </a>
-                </div>
-            </div>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.berita') }}" >
@@ -205,6 +199,12 @@
                 info: false
             });
         } );
+    </script>
+    <script>
+        $('input[type="file"]').change(function(e){
+            var fileName = e.target.files[0].name;
+            $(e.target).siblings('.custom-file-label').html(fileName);
+        });
     </script>
 </body>
 </html>

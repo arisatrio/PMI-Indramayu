@@ -46,12 +46,12 @@
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
-              <i class="fas fa-tint m-auto text-danger"></i>
+              <i class="fas fa-newspaper m-auto text-danger"></i>
             </div>
-            <a href="{{ route('stok-darah') }}" class="text-dark">
-              <h3>STOK DARAH</h3>
+            <a href="{{ route('berita') }}" class="text-dark">
+              <h3>BERITA</h3>
             </a>
-            <p class="lead mb-0">Jumlah stok darah PMI Indramayu real-time</p>
+            <p class="lead mb-0">Cek Berita Terbaru</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -209,32 +209,28 @@
     </div>
   </section>
   <div class="container mt-3">
-  <div class="row">
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text"></p>
+      <div class="row">
+        @foreach($komunikasi as $data)
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="text-danger"><b>{{ $data->tentang_komunikasi}}</b></h4>
+              <p>Dikirim oleh <b>{{ $data->nama }}</b></p>
+              <small>6 Nov</small>
+              <p class="text-danger mt-4">
+                  {{ $data->isi_komunikasi }}
+              </p>
+              <hr>
+              <p>Dibalas oleh <b>Admin</b></p>
+              <p>
+                {{ $data->isi_balasan }}
+              </p>
+            </div>
+          </div>
+        </div>
+        @endforeach
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text"></p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text"></p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
   <!-- END Informasi Donor -->
 @endsection

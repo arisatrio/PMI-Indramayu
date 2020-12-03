@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\DB;
 class WilayahController extends Controller
 {
     //
-    public function index(){
+    public function getKecamatan(){
 
         $kec = DB::table('indonesia_districts')->where('city_id', 3212)->pluck('name', 'id');
-        return view('user.registrasi-donor', compact('kec'));
+        return $kec;
     }
 
     public function store(Request $request){

@@ -21,14 +21,14 @@
         </div>
         <div class="col-sm-8 bg-transparent">
             <div class="collapsed" id="profil" >
-                <h4>Donor Darah Kampus POLINDRA</h4>
+                <h4>{{ $agenda->nama_kegiatan }}</h4>
                 <div class="bg-danger mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.5;"></div>
-                <img src="img/logo-pmi.png" class="card-img" alt="...">
+                <img src="{{ asset('img/agenda/poster/'. $agenda->poster) }}" class="card-img" alt="." >
                 <p class="text-danger"></p>
-                <p class="font-italic">Tempat : Kampus POLINDRA</p>
-                <p class="font-italic">Alamat : Jl. Lohbener Lama No.8</p>
-                <p class="font-italic">Waktu  : 08:00 - 12:00 WIB</p>
-                <p class="font-italic">Ket : -</p>
+                <p class="font-italic">Alamat Tempat Donor : {{ $agenda->alamat_kegiatan }}</p>
+                <p class="font-italic">Tanggal Kegiatan : {{ $agenda->tgl_kegiatan->formatLocalized('%A, %d %B %Y') }}</p>
+                <p class="font-italic">Waktu  : {{ $agenda->jam_mulai }} - {{ $agenda->jam_selesai }}</p>
+                <p class="font-italic">Kontak : {{ $agenda->notlp_koordinator }} ( {{ $agenda->nama_koordinator }} )</p>
                 <div class="bg-dark mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.2;"></div>
             </div>
         </div>  

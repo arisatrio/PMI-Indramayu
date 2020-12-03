@@ -47,27 +47,27 @@
   </div>
 
   <div class="bg-secondary mt-4 mb-2" style="height: 2px; width: 100%; opacity: 0.5;"></div>
-
-  <a href="{{ route('agenda-detail') }}">
+  
+  <a href="{{ route('agenda-detail', $agenda1->id) }}">
   <div class="row mt-4">
     <div class="col-12">
-      <div class="card shadow mb-5">
+      <div class="card shadow mb-5" >
         <div class="row no-gutters">
           <div class="col-md-8">
-            <img src="img/logo-pmi.png" class="card-img" alt="...">
+            <img src="{{ asset('img/agenda/poster/'. $agenda1->poster) }}" class="card-img" alt="." >
             <div class="card-img-overlay">
-              <div class="card shadow" style="height: 75px; width: 75px;">
-                <h3 class="text-center font-weight-bold mt-2 mb-0">1</h3>
-                <p class="text-muted text-center mt-0">Nov</p>
+              <div class="card shadow" style="height: 75px; width: 100px;">
+                <h3 class="text-center font-weight-bold mt-2 mb-0">{{ $agenda1->tgl_kegiatan->formatLocalized('%d') }}</h3>
+                <p class="text-muted text-center mt-0">{{ $agenda1->tgl_kegiatan->formatLocalized('%B') }}</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card-body">
-              <h1 class="card-title">Donor Darah Kampus Polindra</h1>
-              <p class="card-text"><i class="far fa-calendar-alt"></i> Senin, 01-11-2020</p>
-              <p class="card-text"><i class="far fa-clock"></i> 08:00 - 12:00 WIB</p>
-              <p class="card-text"><i class="fas fa-map-marked-alt"></i> Kampus POLINDRA</p>
+              <h1 class="card-title">{{ $agenda1->nama_kegiatan }}</h1>
+              <p class="card-text"><i class="far fa-calendar-alt mr-2"></i>{{ $agenda1->tgl_kegiatan->formatLocalized('%A, %d %B %Y') }}</p>
+              <p class="card-text"><i class="far fa-clock mr-2"></i> {{ $agenda1->jam_mulai }} - {{ $agenda1->jam_selesai }}</p>
+              <p class="card-text"><i class="fas fa-map-marked-alt mr-2"></i>{{ $agenda1->alamat_kegiatan }}</p>
             </div>
           </div>
         </div>
@@ -75,62 +75,30 @@
     </div>
   </div>
   </a>
-  <div class="row mt-4">
-    <div class="col-4">
-      <div class="card shadow mb-5">
-        <img src="img/logo-pmi.png" class="card-img-top" alt="...">
-        <div class="card-img-overlay">
-          <div class="card shadow" style="height: 50px; width: 50px;">
-            <h5 class="text-center font-weight-bold mb-0">1</h5>
-            <p class="text-muted text-center mt-0 ">Nov</p>
-          </div>
-        </div>
-        <div class="card-body">
-          <h1 class="card-title">Donor Darah Balai Desa Jatibarang</h1>
-          <p class="card-text"><i class="far fa-calendar-alt"></i> Senin, 01-11-2020</p>
-          <p class="card-text"><i class="far fa-clock"></i> 08:00 - 12:00 WIB</p>
-          <p class="card-text"><i class="fas fa-map-marked-alt"></i> Balai Desa Jatibarang</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="card shadow mb-5">
-        <img src="img/logo-pmi.png" class="card-img-top" alt="...">
-        <div class="card-img-overlay">
-          <div class="card shadow" style="height: 50px; width: 50px;">
-            <h5 class="text-center font-weight-bold mb-0">31</h5>
-            <p class="text-muted text-center mt-0 ">Oct</p>
-          </div>
-        </div>
-        <div class="card-body">
-          <h1 class="card-title">Donor Darah RSUD Indramayu</h1>
-          <p class="card-text"><i class="far fa-calendar-alt"></i> Sabtu, 31-10-2020</p>
-          <p class="card-text"><i class="far fa-clock"></i> 08:00 - 12:00 WIB</p>
-          <p class="card-text"><i class="fas fa-map-marked-alt"></i> RSUD Indramayu</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="card shadow mb-5">
-        <img src="img/logo-pmi.png" class="card-img-top" alt="...">
-        <div class="card-img-overlay">
-          <div class="card shadow" style="height: 50px; width: 50px;">
-            <h5 class="text-center font-weight-bold mb-0">26</h5>
-            <p class="text-muted text-center mt-0 ">Oct</p>
-          </div>
-        </div>
-        <div class="card-body">
-          <h1 class="card-title">Donor Darah Kampus Universitas Wiralodra</h1>
-          <p class="card-text"><i class="far fa-calendar-alt"></i> Senin, 26-10-2020</p>
-          <p class="card-text"><i class="far fa-clock"></i> 08:00 - 12:00 WIB</p>
-          <p class="card-text"><i class="fas fa-map-marked-alt"></i> Kampus Universitas Wiralodra</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-secondary mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.5;"></div>
   
+  <div class="row mt-4">
+  @foreach($agenda as $data)
+    <div class="col-4">
+    <a href="{{ route('agenda-detail', $data->id) }}">
+      <div class="card shadow mb-5">
+        <img src="{{ asset('img/agenda/poster/'. $data->poster) }}" class="card-img" alt="." >
+        <div class="card-img-overlay">
+          <div class="card shadow" style="height: 50px; width: 75px;">
+            <h5 class="text-center font-weight-bold mb-0">{{ $data->tgl_kegiatan->formatLocalized('%d') }}</h5>
+            <small class="text-muted text-center mt-0 ">{{ $data->tgl_kegiatan->formatLocalized('%B') }}</small>
+          </div>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title">{{ $data->nama_kegiatan }}</h1>
+          <p class="card-text"><i class="far fa-calendar-alt mr-2"></i>{{ $data->tgl_kegiatan->formatLocalized('%A, %d %B %Y') }}</p>
+          <p class="card-text"><i class="far fa-clock mr-2"></i> {{ $data->jam_mulai }} - {{ $data->jam_selesai }}</p>
+          <p class="card-text"><i class="fas fa-map-marked-alt mr-2"></i>{{ $data->alamat_kegiatan }}</p>
+        </div>
+      </div>
+      </a>
+    </div>  
+    @endforeach
+    <div class="bg-secondary mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.5;"></div>
   </div>
 </div>
-
 @endsection

@@ -22,7 +22,7 @@
                         </a>
                         <div class="bg-danger" style="height: 2px; width: 100%;"></div>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('admin.komunikasi') }}">Belum dibalas</a>
+                            <a class="dropdown-item" href="{{ route('admin.komunikasi') }}">Belum dibalas </a>
                             <a class="dropdown-item" href="{{ route('admin.komunikasi-arsip') }}">Sudah dibalas</a>
                         </div>
                     </div>
@@ -42,7 +42,6 @@
                             <div class="col-sm-1">{{ $no++ }}</div>
                             <div class="col-sm-2"><p class="font-weight-bold text-truncate">{{ $data->nama }}</p></div>
                             <div class="col-sm-8"><div class="text-truncate"><b>{{ $data->tentang_komunikasi}} </b> <small>- {{ $data->isi_komunikasi }} </small></div></div>
-                            <!-- <div class="col-sm-2"><p class="font-weight-light">{{ $data->isi_komunikasi }}</p></div> -->
                             <div class="col-sm-1"><b>{{ $data->created_at }}</b></div>
                         </div>
                     </a>

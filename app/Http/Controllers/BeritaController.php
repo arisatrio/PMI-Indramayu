@@ -102,17 +102,24 @@ class BeritaController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $request->validate([
-            'judul_berita'     => 'required',
-            'gambar_berita'    => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'isi_berita'       => 'required'
-        ]);
+        $image_name = $request->hidden_image;
 
         if($request->hasFile('gambar_berita')){
+            $request->validate([
+                'judul_berita'     => 'required',
+                'gambar_berita'    => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'isi_berita'       => 'required'
+            ]);
+
             $image              = $request->file('gambar_berita');
             $imageName          = time().'.'.$image->getClientOriginalExtension();
             $destinationPath    = public_path('/img/berita');
             $image->move($destinationPath, $imageName);
+        }else{
+            $request->validate([
+                'judul_berita'     => 'required',
+                'isi_berita'       => 'required'
+            ]);
         };
 
         $berita = Berita::find($id);
@@ -120,7 +127,7 @@ class BeritaController extends Controller
         $berita->update([
             'judul_berita'  => $request->judul_berita,
             'slug'          => Str::slug($request->judul_berita),
-            'gambar_berita' => $imageName,
+            'gambar_berita' => $image_name,
             'isi_berita'    => $request->isi_berita,
             'penulis_id'    => $penulis
         ]);

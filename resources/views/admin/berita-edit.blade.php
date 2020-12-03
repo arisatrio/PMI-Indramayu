@@ -34,8 +34,9 @@
                     <div class="col-md-4">
                         <div class="input-group mb-3">
                             <div class="custom-file">
-                                <input type="file" value="{{ $berita->gambar_berita }}" class="custom-file-input @error('gambar_berita') is-invalid @enderror" id="gambar_berita" name="gambar_berita">
+                                <input type="file" class="custom-file-input @error('gambar_berita') is-invalid @enderror" id="gambar_berita" name="gambar_berita">
                                 <label class="custom-file-label" for="gambar_berita">Masukkan Gambar</label>
+                                <input type="hidden" name="hidden_image" value="{{ $berita->gambar_berita }}" />
                                 @error('gambar_berita')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror

@@ -46,7 +46,7 @@
                                         <a href="{{ route('admin.berita-edit', $data->id) }}" class="btn btn-success btn-sm mr-2" title="Edit" data-toggle="tooltip">
                                             <i class="fa fa-edit" aria-hidden="true"></i>
                                         </a>
-                                        <a href="" target="_blank" class="btn btn-primary btn-sm mr-2" title="Lihat" data-toggle="tooltip">
+                                        <a href="{{ route('read-berita', $data->slug) }}" target="_blank" class="btn btn-primary btn-sm mr-2" title="Lihat" data-toggle="tooltip">
                                             <i class="fa fa-globe" aria-hidden="true"></i>
                                         </a>
                                         <a href="{{ route('admin.berita-hapus', $data->id) }}" class="btn btn-danger btn-sm mr-2" title="Hapus" data-toggle="tooltip">
