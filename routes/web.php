@@ -19,24 +19,18 @@ Route::view('/cekriwayat', 'user.riwayat')->name('cekriwayat'); //DINAMIS
 Route::view('/stok-darah','user.stok-darah')->name('stok-darah'); //DINAMIS
 Route::view('/cekriwayat', 'user.riwayat')->name('riwayat'); //DINAMIS
 Route::view('/profil', 'user.profil')->name('profil');
-
 Route::get('/agenda', [App\Http\Controllers\HomeController::class, 'indexAgenda'])->name('agenda');
 Route::get('/agenda/{id}', [App\Http\Controllers\HomeController::class, 'agendaDetail'])->name('agenda-detail');
-
 Route::get('/berita', [App\Http\Controllers\HomeController::class, 'indexBerita'])->name('berita');
 Route::get('/berita/read/{slug}', [App\Http\Controllers\HomeController::class, 'readBerita'])->name('read-berita');
-Route::view('/informasi', 'user.informasi')->name('informasi'); //INFORMASI KEBUTUHAN DARAH DINAMIS
+Route::view('/informasi', 'user.informasi')->name('informasi');
 Route::get('/komunikasi', [App\Http\Controllers\KomunikasiController::class, 'create'])->name('komunikasi');
 Route::post('/komunikasi', [App\Http\Controllers\KomunikasiController::class, 'store']);
-
-//Route::view('/pengajuan-event-donor', 'user.pengajuan-event-donor')->name('pengajuan-event-donor'); //DINAMIS
 Route::get('/pengajuan-event-donor', [App\Http\Controllers\HomeController::class, 'formAgenda'])->name('pengajuan-event-donor');
 Route::post('/kel', [App\Http\Controllers\HomeController::class, 'store'])->name('kel');
 Route::get('/kota', [App\Http\Controllers\HomeController::class, 'loadData']);
 Route::post('agenda/store', [App\Http\Controllers\AgendaController::class, 'store'])->name('agenda-store');
-
-Route::get('/cek', [App\Http\Controllers\HomeController::class, 'cek']);
-
+//Route::view('/registrasi-donor', 'user.registrasi-donor')->name('registrasi-donor'); //DINAMIS
 Route::view('/donor-rhesus-negatif', 'user.donor-rhesus-negatif')->name('donor-rhesus-negatif'); //DINAMIS
 Route::view('/hubungi-kami', 'user.hubungi-kami')->name('hubungi-kami');
 Route::view('/faq', 'user.faq')->name('faq');
@@ -45,7 +39,7 @@ Route::view('/faq', 'user.faq')->name('faq');
 Auth::routes();
 Route::group(['middleware' => 'auth'], function(){
     Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware' => 'auth' ], function () {
-        Route::view('dashboard', 'admin.index')->name('dashboard'); //dashboard controller
+        Route::get('dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
         //MODUL AGENDA
         Route::get('agenda', [App\Http\Controllers\AgendaController::class, 'index'])->name('agenda'); //INDEX PENGAJUAN AGENDA
         Route::get('agenda/detail/{id}', [App\Http\Controllers\AgendaController::class, 'show'])->name('agenda-detail'); //DETAIL AGENDA
@@ -72,7 +66,3 @@ Route::group(['middleware' => 'auth'], function(){
         Route::post('komunikasi/balas/{id}', [App\Http\Controllers\KomunikasiController::class, 'update'])->name('komunikasi-dibalas'); //POST BALAS
     });
 });
-
-Route::get('/registrasi-donor', [App\Http\Controllers\WilayahController::class, 'index'])->name('registrasi-donor');
-/* Route::post('/kel', [App\Http\Controllers\WilayahController::class, 'store'])->name('kel');
-Route::get('/kota', [App\Http\Controllers\WilayahController::class, 'loadData']); */

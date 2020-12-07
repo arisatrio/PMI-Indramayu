@@ -28,8 +28,10 @@ class HomeController extends Controller
     public function index(){
         $data       = $this->covid();
         $komunikasi = $this->indexKomunikasi();
+        $agenda     = Agenda::orderBy('tgl_kegiatan', 'ASC')->where('status', "DISETUJUI")->first();
+        $berita     = Berita::orderBy('id', 'DESC')->paginate(5);
 
-        return view('user.index', compact('data', 'komunikasi'));
+        return view('user.index', compact('data', 'komunikasi', 'agenda', 'berita'));
     }
 
     public function covid(){

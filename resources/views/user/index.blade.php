@@ -71,62 +71,110 @@
 
   <!-- COVID -->
   @foreach($data as $datas)
-    <div class="card">
-      <div class="card-header bg-danger text-white text-center">
-        <h3>KASUS COVID-19 INDONESIA REAL-TIME</h3>
-      </div>
-      <div class="row">
-          <div class="col-3">
-            <div class="card-body">
-              <div class="card" style="width: 16rem;">
-                <div class="card-body ">
-                <i class="fas fa-user-plus fa-3x float-right" style="opacity:0.5;"></i>
-                  <h2 class="card-text mb-4"><b>{{ $datas['positif'] }}</b></h2>
-                  <h5 class="card-title">TERKONFIRMASI</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="card-body">
-              <div class="card" style="width: 16rem;">
-                <div class="card-body">
-                <i class="fas fa-user-md fa-3x float-right" style="opacity:0.5;"></i>
-                <h2 class="card-text mb-4"><b>{{ $datas['dirawat'] }}</b></h2>
-                  <h5 class="card-title">KASUS AKTIF</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        <div class="col-3">
-          <div class="card-body">
-            <div class="card" style="width: 16rem;">
-              <div class="card-body">
-              <i class="far fa-smile fa-3x float-right" style="opacity:0.5;"></i>
-                <h2 class="card-text mb-4"><b>{{ $datas['sembuh']}}</b></h2>
-                <h5 class="card-title">SEMBUH</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card-body">
-            <div class="card" style="width: 16rem;">
-              <div class="card-body">
-              <i class="fas fa-ribbon fa-3x float-right" style="opacity:0.5;"></i>
-                <h2 class="card-text mb-4"></b>{{ $datas['meninggal']}}</b></h2>
-                <h5 class="card-title">MENINGGAL</h5>
-              </div>
+  <div class="card mb-5">
+    <div class="card-header bg-danger text-white text-center">
+      <h3>KASUS COVID-19 INDONESIA REAL-TIME</h3>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div class="card-body">
+          <div class="card" style="width: 16rem;">
+            <div class="card-body ">
+              <i class="fas fa-user-plus fa-3x float-right" style="opacity:0.5;"></i>
+              <h2 class="card-text mb-4"><b>{{ $datas['positif'] }}</b></h2>
+              <h5 class="card-title">TERKONFIRMASI</h5>
             </div>
           </div>
         </div>
       </div>
-      <div class=" text-muted mb-2 text-center ">
-        <small>Sumber : kawalcorona.com</small>
+      <div class="col-3">
+        <div class="card-body">
+          <div class="card" style="width: 16rem;">
+            <div class="card-body">
+            <i class="fas fa-user-md fa-3x float-right" style="opacity:0.5;"></i>
+            <h2 class="card-text mb-4"><b>{{ $datas['dirawat'] }}</b></h2>
+              <h5 class="card-title">KASUS AKTIF</h5>
+            </div>
+          </div>
+        </div>
       </div>
-    </div >
-    @endforeach
-<!-- END COVID -->
+      <div class="col-3">
+        <div class="card-body">
+          <div class="card" style="width: 16rem;">
+            <div class="card-body">
+            <i class="far fa-smile fa-3x float-right" style="opacity:0.5;"></i>
+              <h2 class="card-text mb-4"><b>{{ $datas['sembuh']}}</b></h2>
+              <h5 class="card-title">SEMBUH</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card-body">
+          <div class="card" style="width: 16rem;">
+            <div class="card-body">
+            <i class="fas fa-ribbon fa-3x float-right" style="opacity:0.5;"></i>
+              <h2 class="card-text mb-4"></b>{{ $datas['meninggal']}}</b></h2>
+              <h5 class="card-title">MENINGGAL</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" text-muted mb-2 text-center ">
+      <small>Sumber : kawalcorona.com</small>
+    </div>
+  </div>
+  @endforeach
+  <!-- END COVID -->
+
+  <!-- Agenda -->
+  <div class="card mb-5" >
+    <div class="card-header bg-danger text-white text-center">
+      <h3>AGENDA</h3>
+    </div>
+    <div class="card-body">
+      <a href="{{ route('agenda-detail', $agenda->id) }}">
+        <div class="row">
+          <div class="col-6">
+            <img src="{{ asset('img/agenda/poster/'. $agenda->poster) }}" class="img-fluid" alt=".">
+          </div>
+          <div class="col-6">
+            <h1 class="card-title">{{ $agenda->nama_kegiatan }}</h1>
+            <p class="card-text"><i class="far fa-calendar-alt mr-2"></i>{{ $agenda->tgl_kegiatan->formatLocalized('%A, %d %B %Y') }}</p>
+            <p class="card-text"><i class="far fa-clock mr-2"></i> {{ $agenda->jam_mulai }} - {{ $agenda->jam_selesai }}</p>
+            <p class="card-text"><i class="fas fa-map-marked-alt mr-2"></i>{{ $agenda->alamat_kegiatan }}</p>
+          </div>
+        </div>
+      </a>
+      <a class="text-muted float-right" href="{{ route('agenda') }}">Indeks Agenda > </a>
+    </div>
+  </div>
+  <!-- END Agenda -->
+
+  <!-- Berita -->
+  <div class="card h-100" >
+    <div class="card-header bg-danger text-white text-center">
+      <h3>Berita</h3>
+    </div>
+    <div class="card-body">
+      @foreach($berita as $data)
+      <a href="{{ url('berita/read', $data->slug) }}">
+        <div class="row">
+          <div class="col-4">
+            <img src="{{ asset('img/berita/'. $data->gambar_berita) }}" class="img-thumbnail" alt="..." style="height:250px; width:300px;"> 
+          </div>
+          <div class="col-8 mt-5">
+            <h3 class="text-">{{ $data->judul_berita }}</h3>
+            <small class="text-muted"><b>{{ $data->user->name }}</b> | {{ $data->created_at->diffForHumans() }}</small>
+          </div>
+        </div>
+      </a>
+      @endforeach
+      <a class="text-muted float-right" href="{{ route('berita') }}">Indeks Berita > </a>
+    </div>
+  </div>
+  <!-- END Berita -->
 <!-- Informasi Donor -->
   <section class="showcase">
     <div class="container-fluid p-0 mt-5">

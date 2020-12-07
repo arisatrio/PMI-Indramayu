@@ -28,6 +28,8 @@
     <link href="https://https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
     <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.com/libraries/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
     <title>@yield('title')</title>
 </head>
@@ -63,18 +65,6 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="">Pendaftar Donor</a>
                     <a class="collapse-item" href="">Data Pendonor</a>
-                </div>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-tint"></i>
-                <span>Stok Darah</span>
-            </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="">Update Stok Darah</a>
-                    <a class="collapse-item" href="">Data </a>
                 </div>
             </div>
         </li>
