@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//USERok
+//USER
 
 Route::get('/komunikasi', [App\Http\Controllers\KomunikasiController::class, 'create'])->name('komunikasi');
 Route::post('/komunikasi', [App\Http\Controllers\KomunikasiController::class, 'store']);
@@ -60,6 +61,7 @@ Route::group(['middleware' => 'auth'], function(){
         Route::get('berita-edit/{id}', [App\Http\Controllers\BeritaController::class, 'edit'])->name('berita-edit'); //EDIT BERITA
         Route::post('berita-edit/update/{id}', [App\Http\Controllers\BeritaController::class, 'update'])->name('berita-update'); //EDIT BERITA POST
         Route::get('berita-edit/delete/{id}', [App\Http\Controllers\BeritaController::class, 'destroy'])->name('berita-hapus'); //HAPUS BERITA
+
         //MODUL KOMUNIKASI
         Route::get('komunikasi-baru', [App\Http\Controllers\KomunikasiController::class, 'index'])->name('komunikasi'); //INDEX BELUM DIBALAS
         Route::get('komunikasi-arsip', [App\Http\Controllers\KomunikasiController::class, 'arsip'])->name('komunikasi-arsip'); //INDEX SUDAH DIBALAS
@@ -67,15 +69,33 @@ Route::group(['middleware' => 'auth'], function(){
         Route::delete('komunikasi/{id}', [App\Http\Controllers\KomunikasiController::class, 'destroy'])->name('komunikasi-hapus'); //HAPUS
         Route::post('komunikasi/balas/{id}', [App\Http\Controllers\KomunikasiController::class, 'update'])->name('komunikasi-dibalas'); //POST BALAS
 
-        //MODUL PERMINTAAN DARAH
-        Route::get('/permintaan_darah', [App\Http\Controllers\PermintaanDarahController::class, 'index'])->name('/permintaan_darah'); //INDEX BELUM DIBALAS
-        Route::get('/permintaan_darah/permintaan-darah', [App\Http\Controllers\PermintaanDarahController::class, 'create'])->name('/permintaan_darah/permintaan-darah'); //INDEX SUDAH DIBALAS
-        Route::get('/permintaan_darah/edit-permintaandarah/{id}', [App\Http\Controllers\PermintaanDarahController::class, 'edit'])->name('/permintaan_darah/edit-permintaandarah'); //LIHAT DAN BALAS
-        Route::delete('/permintaan_darah/destroy{id}', [App\Http\Controllers\PermintaanDarahController::class, 'destroy'])->name('/permintaan_darah/destroy{id}'); //HAPUS
-        Route::put('/permintaan_darah/update/{id}', [App\Http\Controllers\PermintaanDarahController::class, 'update'])->name('/permintaan_darah/update/{id}'); //POST BALAS
+        
+
+        //MODUL PENDONOR
+        Route::get('/pendonor', [App\Http\Controllers\PendonorController::class, 'index'])->name('pendonor'); 
+        Route::get('/pendonor/addpendonor', [App\Http\Controllers\PendonorController::class, 'create'])->name('pendonor-addpendonor');
+        Route::post('/pendonor/proses', [App\Http\Controllers\PendonorController::class, 'store'])->name('pendonor-proses');
+        Route::get('/pendonor/editpendonor/{id}', [App\Http\Controllers\PendonorController::class, 'edit'])->name('pendonor-editpendonor'); //LIHAT DAN BALAS
+        Route::get('/pendonor/destroy/{id}', [App\Http\Controllers\PendonorController::class, 'destroy'])->name('pendonor-destroy'); //HAPUS
+        Route::post('/pendonor/update/{id}', [App\Http\Controllers\PendonorController::class, 'update'])->name('pendonor-update'); //POST BALAS
+
+         //MODUL MCU
+        Route::get('/mcu', [App\Http\Controllers\McuController::class, 'index'])->name('mcu'); 
+        Route::get('/mcu/tambah-mcu', [App\Http\Controllers\McuController::class, 'create'])->name('mcu-tambah-mcu');
+        Route::post('/mcu/proses', [App\Http\Controllers\McuController::class, 'store'])->name('mcu-proses');
+        Route::get('/mcu/edit-mcu/{id}', [App\Http\Controllers\McuController::class, 'edit'])->name('mcu-edit-mcu'); //LIHAT DAN BALAS
+        Route::get('/mcu/destroy/{id}', [App\Http\Controllers\McuController::class, 'destroy'])->name('mcu-destroy'); //HAPUS
+        Route::post('/mcu/update/{id}', [App\Http\Controllers\McuController::class, 'update'])->name('mcu-update'); //POST BALAS
+
+
+
     });
 });
 
 Route::get('/registrasi-donor', [App\Http\Controllers\WilayahController::class, 'index'])->name('registrasi-donor');
 Route::post('/kel', [App\Http\Controllers\WilayahController::class, 'store'])->name('kel');
 Route::get('/kota', [App\Http\Controllers\WilayahController::class, 'loadData']);
+
+
+
+        

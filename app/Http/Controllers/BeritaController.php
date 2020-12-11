@@ -64,6 +64,8 @@ class BeritaController extends Controller
         ]);
         $berita->save();
 
+        dd($berita);
+
         return redirect('/admin/berita');
     }
 

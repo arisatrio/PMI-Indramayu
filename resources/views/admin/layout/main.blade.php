@@ -62,7 +62,8 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="">Pendaftar Donor</a>
-                    <a class="collapse-item" href="">Data Pendonor</a>
+                    <a class="collapse-item" href="{{ route('admin.pendonor') }}">Info Pendonor</a>
+                    <a class="collapse-item" href="{{ route('admin.mcu') }}">Info MCU</a>
                 </div>
             </div>
         </li>

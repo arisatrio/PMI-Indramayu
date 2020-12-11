@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\PendonorModel;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class PendonorController extends Controller
 {
@@ -13,7 +16,8 @@ class PendonorController extends Controller
      */
     public function index()
     {
-        //
+        $pendonor = PendonorModel::all();
+        return view ('admin.pendonor',compact('pendonor'));
     }
 
     /**
@@ -23,7 +27,7 @@ class PendonorController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tambah-pendonor');
     }
 
     /**
@@ -34,7 +38,33 @@ class PendonorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            
+             
+             'nama_pendonor'            => 'required',
+             'alamat'     => 'required',
+             'notelp'       => 'required',
+             'gol_darah'            => 'required',
+             'tgl_kembalidonor'       => 'required',
+             'status'            => 'required',
+             
+        ],[
+            'required'          => 'Data tidak boleh kosong!',
+         ]);
+
+        $pendonor = new \App\Models\PendonorModel();
+        
+       
+        $pendonor->nama_pendonor = $request->input('nama_pendonor');
+        $pendonor->alamat = $request->input('alamat');
+        $pendonor->notelp    = $request->input('notelp');
+        $pendonor->gol_darah    = $request->input('gol_darah');
+        $pendonor->tgl_kembalidonor    = $request->input('tgl_kembalidonor');
+        $pendonor->status    = $request->input('status');
+        $pendonor->save(); 
+
+        //dd($pendonor);
+        return redirect('admin/pendonor');
     }
 
     /**
@@ -54,9 +84,10 @@ class PendonorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id_pendonor)
     {
-        //
+         $pendonor = PendonorModel::findOrFail($id_pendonor);
+        return view('admin.editpendonor',compact('pendonor'));
     }
 
     /**
@@ -66,9 +97,20 @@ class PendonorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_pendonor)
     {
-        //
+        $pendonor = \App\Models\PendonorModel::findOrFail($id_pendonor);
+          
+        $pendonor->nama_pendonor = $request->input('nama_pendonor');
+         $pendonor->alamat = $request->input('alamat');
+        $pendonor->notelp = $request->input('notelp');
+        $pendonor->gol_darah= $request->input('gol_darah');
+        $pendonor->tgl_kembalidonor = $request->input('tgl_kembalidonor');
+         $pendonor->status = $request->input('status');
+        
+        
+        $pendonor->update();
+        return redirect('/admin/pendonor')->with('status','Data Berhasil Dirubah');
     }
 
     /**
@@ -77,8 +119,26 @@ class PendonorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_pendonor)
     {
-        //
+        $pendonor = PendonorModel::find($id_pendonor);
+        $pendonor->delete();
+        
+        return redirect('/admin/pendonor');
+    }
+
+    public function cari(Request $request)
+    {
+        // menangkap data pencarian
+        $cari = $request->cari;
+ 
+            // mengambil data dari table paket sesuai pencarian data
+        $pendonor = DB::table('pendonor')
+        ->where('nama_pendonor','like',"%".$cari."%")
+        ->paginate();
+ 
+            // mengirim data paket ke view index
+        return view('admin.pendonor',['pendonor' => $pendonor]);
+ 
     }
 }
