@@ -126,7 +126,6 @@
             <div class="collapse" id="empat" >
                 <h4>Informasi Kebutuhan Darah</h4>
                 <div class="bg-danger mt-2 mb-2" style="height: 2px; width: 45%; opacity: 0.5;"></div>
-                <p class="text-danger">$$$$$$$ Saat ini stok darah tersedia</p>
                 <p>Dapat menghubungi petugas Customer Service kami. 
                 021-390 6666 ext. 151</p>
                 <div class="bg-dark mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.2;"></div>

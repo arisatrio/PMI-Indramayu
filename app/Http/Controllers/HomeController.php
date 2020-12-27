@@ -9,13 +9,15 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Illuminate\Pagination\Paginator;
 use Carbon\Carbon;
+use Carbon\CarbonPeriod;
 use App\Models\Berita;
-use App\Models\User;
 use App\Models\Komunikasi;
 use App\Models\Agenda;
-use App\Models\Kecamatan;
-use App\Models\Kelurahan;
+use App\Models\Registrasi;
+use App\Models\Mcu;
+use App\Models\Pendonor;
 use App\Http\Controllers\WilayahController;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
@@ -25,11 +27,29 @@ class HomeController extends Controller
         $this->WilayahController = $WilayahController;
     }
 
+    public function cekRiwayat(Request $request)
+    {
+        setlocale(LC_ALL, 'IND');
+        $nik = $request->nik;
+
+        $pendonor = Pendonor::with(['registrasi', 'mcu'])->where('status_donor', "BERHASIL")->orderBy('updated_at', 'DESC')->whereHas('Registrasi', function($q) use ($nik){
+            $q->where('nik', $nik);
+        })->get();
+
+        $dataPendonor   = $pendonor->first();
+        $jmlDonor       = $pendonor->count();
+
+        return view('user.riwayat', compact('pendonor', 'dataPendonor', 'jmlDonor'));
+    }
+
     public function index(){
+        setlocale(LC_ALL, 'IND');
         $data       = $this->covid();
         $komunikasi = $this->indexKomunikasi();
+        $agenda     = Agenda::orderBy('tgl_kegiatan', 'ASC')->where('status', "DISETUJUI")->first();
+        $berita     = Berita::orderBy('id', 'DESC')->paginate(5);
 
-        return view('user.index', compact('data', 'komunikasi'));
+        return view('user.index', compact('data', 'komunikasi', 'agenda', 'berita'));
     }
 
     public function covid(){
@@ -70,6 +90,22 @@ class HomeController extends Controller
         return view('user.agenda', compact('agenda', 'agenda1'));
     }
 
+    public function search(Request $request)
+    {
+        setlocale(LC_ALL, 'IND');
+        $cari = $request->cari;
+
+        $agenda1 = [];
+        $agenda = Agenda::orderBy('tgl_kegiatan', 'ASC')->where('status', "DISETUJUI")
+                ->where('nama_kegiatan', 'LIKE', '%'.$cari.'%')
+                ->orWhere('tgl_kegiatan', 'LIKE', '%'.$cari.'%')
+                ->orWhere('alamat_kegiatan', 'LIKE', '%'.$cari.'%')
+                ->orWhere('nama_institusi', 'LIKE', '%'.$cari.'%')
+                ->get();
+
+        return view('user.agenda', compact('agenda', 'agenda1'));
+    }
+
     public function agendaDetail($id){
         setlocale(LC_ALL, 'IND');
         $agenda = Agenda::find($id);
@@ -96,16 +132,20 @@ class HomeController extends Controller
         }
     }
 
-    public function cek(){
-        $agenda = Agenda::orderBy('id', 'DESC')->get();
+    public function cek()
+    {
+        $start = new Carbon('first day of last month');
+        $end = new Carbon('last day of last month');
 
-        foreach($agenda as $data){
-            echo $data->kecamatan->name;
-            echo $data->kelurahan->name;
+        $firstDayofPreviousMonth = Carbon::now()->startOfMonth()->toDateString();
+        $lastDayofPreviousMonth = Carbon::now()->toDateString();
+        $bulanIni = CarbonPeriod::create($firstDayofPreviousMonth, $lastDayofPreviousMonth);
+
+        foreach($bulanIni as $date){
+            echo $date->toDateString();
         }
         
-
-        
+        //dd($bulanIni);
     }
 
 }

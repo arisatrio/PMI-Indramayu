@@ -33,10 +33,10 @@
             @foreach($berita as $data)
             <a href="{{ url('berita/read', $data->slug) }}">
                 <div class="row" style="height: 180px">
-                    <div class="col-sm-4">
+                    <div class="col-4">
                         <img src="{{ asset('img/berita/'. $data->gambar_berita) }}" class="img-thumbnail" alt="..." style="height:150px; width:200px;"> 
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-8">
                         <h5 class="text-">{{ $data->judul_berita }}</h5>
                         <small class="text-muted"><b>{{ $data->user->name }}</b> | {{ $data->created_at->diffForHumans() }}</small>
                     </div>

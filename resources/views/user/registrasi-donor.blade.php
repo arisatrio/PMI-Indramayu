@@ -20,11 +20,6 @@
                     <i class="fa fa-angle-right mr-2"></i>Formulir Registrasi Donor
                 </a>
                 <div class="bg-secondary" style="height: 1px; opacity: 0.2;"></div>
-                <a class="nav-link text-muted mb-2"  href="{{ route('donor-rhesus-negatif') }}" >
-                    <i class="fa fa-angle-right mr-2"></i>Formulir Donor Rhesus Negatif
-                </a>
-                <div class="bg-secondary" style="height: 1px; opacity: 0.2;"></div>
-                <div class="bg-secondary" style="height: 1px; opacity: 0.2;"></div>
                 <a class="nav-link text-muted mb-2"  href="{{ route('komunikasi') }}" >
                     <i class="fa fa-angle-right mr-2"></i>Formulir Komunikasi (Pertanyaan & Saran)
                 </a>
@@ -32,8 +27,26 @@
             </nav>
         </div>
         <div class="col-sm-8">
-            <form>
+            <form action="{{ route('registrasi-store') }}" method="POST">
+                @csrf
                 <h4>Formulir Donor Darah</h4>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                @if (session('messages'))
+                <div class="alert alert-danger alert-dismissible">
+                    {{ session('messages') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @endif
                 <div class="bg-danger mt-2 mb-4" style="height: 2px; width: 83%; opacity: 0.5;"></div>
                 <div class="form-group row">
                     <label for="nik" class="col-sm-3 col-form-label">No. KTP/SIM</label>
@@ -75,7 +88,7 @@
                 </div>
                 <div class="form-group row">
                     <label for="jenis_kelamin" class="col-sm-3 col-form-label">Jenis Kelamin</label>
-                    <div class="col-sm-4">
+                    <div class="col-sm-9">
                         <select name="jenis_kelamin" id="jenis_kelamin" class="form-control" required>
                             <option selected disabled>--Pilih--</option>
                             <option value="Laki-laki">Laki-Laki</option>
@@ -86,12 +99,12 @@
                 <div class="form-group row">
                     <label for="tempat_lahir" class="col-sm-3 col-form-label">Tempat Lahir</label>
                     <div class="col-sm-9">
-                        <select class="form-control" name="tempat_lahir" id="tempat_lahir" placeholder="Tempat Lahir" required></select>
+                        <input type="text" class="form-control" name="tempat_lahir" id="tempat_lahir" required placeholder="Tempat Lahir">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="tanggal_lahir" class="col-sm-3 col-form-label">Tanggal Lahir</label>
-                    <div class="col-sm-4">
+                    <div class="col-sm-9">
                         <input type="date" class="form-control" name="tanggal_lahir" id="tanggal_lahir" required>
                     </div>
                 </div>
@@ -126,6 +139,26 @@
                     <div class="col-sm-9">
                         <input type="text" class="form-control" name="nohp" id="nohp" placeholder="No Telepon" required>
                     </div>
+                </div>
+                <hr>
+                <h5>Rencana Donor Darah</h5>
+                <div class="bg-danger mt-2 mb-4" style="height: 2px; width: 30%; opacity: 0.5;"></div>
+                <div class="form-group row">
+                    <label for="tanggal_lahir" class="col-sm-3 col-form-label">Tanggal Donor</label>
+                    <div class="col-sm-9">
+                        <input type="date" class="form-control" name="tanggal_donor" id="tanggal_donor" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="jam_donor" class="col-sm-3 col-form-label">Jam Donor</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="jam_donor" name="jam_donor" required>
+                    </div>
+                    <script type="text/javascript">
+                        $('#jam_donor').datetimepicker({
+                            format : 'HH:mm'
+                        });
+                    </script>
                 </div>
                 <button type="submit" class="btn btn-primary col-md-2 float-right">Daftar</button>
             </form>

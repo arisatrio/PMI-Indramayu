@@ -25,7 +25,7 @@
                 <div class="bg-danger mt-2 mb-2" style="height: 2px; width: 100%; opacity: 0.5;"></div>
                 <img src="{{ asset('img/agenda/poster/'. $agenda->poster) }}" class="card-img" alt="." >
                 <p class="text-danger"></p>
-                <p class="font-italic">Alamat Tempat Donor : {{ $agenda->alamat_kegiatan }}</p>
+                <p class="font-italic">Alamat Tempat Donor : {{ $agenda->kecamatan->name }}</p>
                 <p class="font-italic">Tanggal Kegiatan : {{ $agenda->tgl_kegiatan->formatLocalized('%A, %d %B %Y') }}</p>
                 <p class="font-italic">Waktu  : {{ $agenda->jam_mulai }} - {{ $agenda->jam_selesai }}</p>
                 <p class="font-italic">Kontak : {{ $agenda->notlp_koordinator }} ( {{ $agenda->nama_koordinator }} )</p>

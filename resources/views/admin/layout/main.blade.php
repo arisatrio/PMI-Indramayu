@@ -28,70 +28,68 @@
     <link href="https://https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
     <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.com/libraries/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
     <title>@yield('title')</title>
 </head>
 <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
-
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-white sidebar sidebar-white accordion shadow" id="accordionSidebar">
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}">
-          <img src="{{ asset('/img/logo-pmi.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
-          <div class="sidebar-brand-text mx-3">PMI Indramayu</div>
+        <a class="sidebar-brand d-flex align-items-center justify-content-center " href="{{ route('admin.dashboard') }}">
+            <img src="{{ asset('/img/logo-pmi.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
+            <div class="sidebar-brand-text text-dark mx-3">PMI Indramayu</div>
         </a>
         <hr class="sidebar-divider my-0">
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-            <a class="nav-link" href="{{ route('admin.dashboard') }}">
+        <li class="nav-item">
+            <a class="nav-link @if(Request::is('admin/dashboard')) text-danger @else text-muted @endif " href="{{ route('admin.dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
         </li>
         <hr class="sidebar-divider">
         <div class="sidebar-heading">
-            Menu
+            Donor Darah
         </div>
-        <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <i class="fas fa-users"></i>
-                <span>Pendonor</span>
+            <a class="nav-link @if(Request::is('admin/registrasi')) text-danger @else text-muted @endif " href="{{ route('admin.registrasi') }}">
+                <i class="fas fa-database"></i>
+                <span>Data Registrasi Donor</span>
             </a>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="">Pendaftar Donor</a>
-                    <a class="collapse-item" href="">Data Pendonor</a>
-                </div>
-            </div>
         </li>
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-tint"></i>
-                <span>Stok Darah</span>
+        <li class="nav-item ">
+            <a class="nav-link @if(Request::is('admin/mcu')) text-danger @else text-muted @endif " href="{{ route('admin.mcu') }}">
+                <i class="fas fa-database"></i>
+                <span>Data MCU</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="">Update Stok Darah</a>
-                    <a class="collapse-item" href="">Data </a>
-                </div>
-            </div>
         </li>
+        <li class="nav-item ">
+            <a class="nav-link @if(Request::is('admin/pendonor')) text-danger @else text-muted @endif" href="{{ route('admin.pendonor') }}">
+                <i class="fas fa-database"></i>
+                <span>Data Pendonor</span>
+            </a>
+        </li>
+        <hr class="sidebar-divider">
+        <div class="sidebar-heading">
+            WEBSITE
+        </div>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('admin.agenda') }}" >
+            <a class="nav-link @if(Request::is('admin/agenda')) text-danger @else text-muted @endif " href="{{ route('admin.agenda') }}" >
                 <i class="fas fa-calendar-alt"></i>
                 <span>Agenda</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('admin.berita') }}" >
+            <a class="nav-link @if(Request::is('admin/berita')) text-danger @else text-muted @endif " href="{{ route('admin.berita') }}" >
                 <i class="fas fa-newspaper"></i>
                 <span>Berita</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('admin.komunikasi') }}" >
+            <a class="nav-link @if(Request::is('admin/komunikasi')) text-danger @else text-muted @endif " href="{{ route('admin.komunikasi') }}" >
                 <i class="fas fa-envelope"></i>
                 <span>Pertanyaan dan Saran</span>
             </a>
@@ -105,26 +103,14 @@
         <!-- Main Content -->
         <div id="content">
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-            <!-- Topbar Search -->
-            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Cari..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn" type="button">
-                            <i class="fas fa-search fa-sm"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
+        <nav class="navbar navbar-expand navbar-light bg-danger topbar mb-4 static-top shadow">
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">
-
                 <div class="topbar-divider d-none d-sm-block"></div>
                 <!-- Nav Item - User Information -->
                 <li class="nav-item dropdown no-arrow">
-                    <a class="nav-link dropdown-toggle" href="{{ url('admin/profil') }}" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->name }}</span>
+                    <a class="nav-link dropdown-toggle text-white " href="{{ url('admin/profil') }}" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline text-white small">{{ auth()->user()->name }}</span>
                         <i class="fas fa-user"></i>
                     </a>
                     <!-- Dropdown - User Information -->
@@ -180,7 +166,7 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 
     <Script>
         $(function () {
