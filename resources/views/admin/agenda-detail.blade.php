@@ -5,27 +5,22 @@
 @section('container')
 <div class="container-fluid">
     <div class="row">
-        <div class="col mb-4">
-            <div class="d-sm-flex">
-                <a href="" class="text-muted">
-                    <i class="fas fa-calendar-alt fa-2x mr-2"></i>
-                </a>
-                <h3 class="text-gray-800">Agenda</h3>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="card shadow">
+        <div class="col-md-12 card">
                 <div class="card-body">
-                    <div class="container">
-                        <div class="row mb-4">
-                            <a class="btn btn-success mb-4" href="{{ route('admin.agenda') }}"><i class="fa fa-arrow-left mr-2"></i>Kembali</a>
-                            <form method="POST" action="{{ route('admin.agenda-hapus', $agenda->id) }}">
-                                @csrf
-                                @method('delete')
-                                <button type="submit" class="btn btn-danger mb-4 ml-2"><i class="fa fa-trash mr-2"></i>Hapus</button>
-                            </form>
+                    <div class="row mb-4">
+                        <div class="d-flex">
+                            <h1 class="font-weight-bold">Detail Agenda</h1>
                         </div>
-
+                    </div>
+                    <div class="row mb-4">
+                        <a class="btn btn-success mb-4" href="{{ route('admin.agenda') }}"><i class="fa fa-arrow-left mr-2"></i>Kembali</a>
+                        <form method="POST" action="{{ route('admin.agenda-hapus', $agenda->id) }}">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-danger mb-4 ml-2"><i class="fa fa-trash mr-2"></i>Hapus</button>
+                        </form>
+                    </div>
+                    <div class="container">
                             <form method="POST" action="{{ route('agenda-store') }}" enctype="multipart/form-data">
                                 @csrf
                                 @if ($errors->any())
@@ -182,7 +177,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 </div>
 @endsection

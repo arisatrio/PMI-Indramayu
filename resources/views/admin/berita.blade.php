@@ -5,20 +5,16 @@
 @section('container')
 <div class="container-fluid">
     <div class="row">
-        <div class="col mb-4">
-            <div class="d-sm-flex">
-                <a href="" class="text-muted">
-                    <i class="fas fa-newspaper fa-2x mr-2"></i>
-                </a>
-                <h3 class="text-gray-800">Berita</h3>
-            </div>
-        </div>
         <div class="col-sm-12 card shadow">
             <div class="card-body">
                 <div class="row mb-4">
+                    <div class="col">
+                        <div class="d-sm-flex">
+                            <h1 class="font-weight-bold">Berita</h1>
+                        </div>
+                    </div>
                     <div class="col-sm-2">
-                        <a href="{{ route('admin.berita-baru') }}" class="btn btn-danger">
-                            <i class="fas fa-pen mr-2"></i>
+                        <a href="{{ route('admin.berita-baru') }}" class="btn btn-success mt-2">
                             Buat Berita
                         </a>
                     </div>

@@ -10,14 +10,6 @@
         <div class="col-xl-9 float-left ">
           <h1 class="mb-5"> <i class="icon-calendar fa-1x mr-2"></i>AGENDA</h1>
         </div>
-        <form>
-          <div class="form-row">
-            <div class="col-12 col-md-9 mb-2 mb-md-0">
-            </div>
-            <div class="col-12 col-md-3">
-            </div>
-          </div>
-        </form>
     </div>
   </div>
 </header>
@@ -25,21 +17,10 @@
 <div class="container">
   <div class="row mt-4">
     <div class="col">
-      <form>
+      <form action="{{ route('agenda-cari') }}" method="GET">
         <div class="form-row">
-          <div class="col-6">
-            <input type="text" class="form-control" placeholder="Lokasi">
-          </div>
-          <div class="col-6">
-            <select id="inputState" class="form-control">
-              <option selected>Waktu</option>
-              <option>...</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row mt-2">
-          <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Cari</button>
+          <div class="col-8">
+            <input type="text" name="cari" class="form-control" placeholder="Lokasi">
           </div>
         </div>
       </form>
@@ -48,6 +29,7 @@
 
   <div class="bg-secondary mt-4 mb-2" style="height: 2px; width: 100%; opacity: 0.5;"></div>
   
+  @if($agenda1 != null)
   <a href="{{ route('agenda-detail', $agenda1->id) }}">
   <div class="row mt-4">
     <div class="col-12">
@@ -75,7 +57,8 @@
     </div>
   </div>
   </a>
-  
+  @endif
+
   <div class="row mt-4">
   @foreach($agenda as $data)
     <div class="col-4">

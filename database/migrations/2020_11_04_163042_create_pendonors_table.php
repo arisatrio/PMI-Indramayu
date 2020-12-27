@@ -15,17 +15,9 @@ class CreatePendonorsTable extends Migration
     {
         Schema::create('pendonors', function (Blueprint $table) {
             $table->id();
-            $table->string('nik')->unique();
-            $table->string('nama');
-            $table->string('alamat');
-            $table->string('kelurahan');
-            $table->string('kecamatan');
-            $table->string('jenis_kelamin');
-            $table->string('tempat_lahir');
-            $table->string('tanggal_lahir');
-            $table->string('pekerjaan');
-            $table->string('status');
-            $table->string('nohp');
+            $table->foreignId('registrasi_id');
+            $table->foreignId('mcu_id');
+            $table->string('no_kantong_darah');
             $table->timestamps();
         });
     }

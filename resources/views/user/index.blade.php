@@ -10,13 +10,13 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">Cek Jadwal & Riwayat Donor Anda</h1>
+          <h1 class="font-weight-bold mb-5">Cek Jadwal & Riwayat Donor Anda</h1>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
+          <form action="{{ route('cek-riwayat') }}">
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Masukan NIK anda...">
+                <input type="text" name="nik" class="form-control form-control-lg" placeholder="Masukan NIK anda...">
               </div>
               <div class="col-12 col-md-3">
                 <button type="submit" class="btn btn-block btn-lg btn-primary">Cek</button>
@@ -71,49 +71,43 @@
 
   <!-- COVID -->
   @foreach($data as $datas)
-  <div class="card mb-5">
+  <div class="card shadow mb-5">
     <div class="card-header bg-danger text-white text-center">
-      <h3>KASUS COVID-19 INDONESIA REAL-TIME</h3>
+      <h3>KASUS COVID-19 INDONESIA HARI INI</h3>
     </div>
-    <div class="row">
-      <div class="col-3">
-        <div class="card-body">
-          <div class="card" style="width: 16rem;">
-            <div class="card-body ">
-              <i class="fas fa-user-plus fa-3x float-right" style="opacity:0.5;"></i>
-              <h2 class="card-text mb-4"><b>{{ $datas['positif'] }}</b></h2>
-              <h5 class="card-title">TERKONFIRMASI</h5>
+    <div class="card-body">
+      <div class="row text-white">
+        <div class="col-sm-3 mb-2">
+          <div class="card bg-danger">
+            <div class="card-body">
+                <i class="fas fa-user-plus fa-3x float-right" style="opacity:0.5;"></i>
+                <h2 class="card-text mb-4"><b>{{ $datas['positif'] }}</b></h2>
+                <h5 class="card-title">TERKONFIRMASI</h5>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-3">
-        <div class="card-body">
-          <div class="card" style="width: 16rem;">
+        <div class="col-sm-3 mb-2">
+          <div class="card bg-warning">
             <div class="card-body">
-            <i class="fas fa-user-md fa-3x float-right" style="opacity:0.5;"></i>
-            <h2 class="card-text mb-4"><b>{{ $datas['dirawat'] }}</b></h2>
+              <i class="fas fa-user-md fa-3x float-right" style="opacity:0.5;"></i>
+              <h2 class="card-text mb-4"><b>{{ $datas['dirawat'] }}</b></h2>
               <h5 class="card-title">KASUS AKTIF</h5>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-3">
-        <div class="card-body">
-          <div class="card" style="width: 16rem;">
+        <div class="col-sm-3 mb-2">
+          <div class="card bg-info">
             <div class="card-body">
-            <i class="far fa-smile fa-3x float-right" style="opacity:0.5;"></i>
+              <i class="far fa-smile fa-3x float-right" style="opacity:0.5;"></i>
               <h2 class="card-text mb-4"><b>{{ $datas['sembuh']}}</b></h2>
               <h5 class="card-title">SEMBUH</h5>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-3">
-        <div class="card-body">
-          <div class="card" style="width: 16rem;">
+        <div class="col-sm-3 mb-2">
+          <div class="card bg-secondary">
             <div class="card-body">
-            <i class="fas fa-ribbon fa-3x float-right" style="opacity:0.5;"></i>
+              <i class="fas fa-ribbon fa-3x float-right" style="opacity:0.5;"></i>
               <h2 class="card-text mb-4"></b>{{ $datas['meninggal']}}</b></h2>
               <h5 class="card-title">MENINGGAL</h5>
             </div>
@@ -129,12 +123,12 @@
   <!-- END COVID -->
 
   <!-- Agenda -->
-  <div class="card mb-5" >
+  <div class="card shadow mb-5" >
     <div class="card-header bg-danger text-white text-center">
       <h3>AGENDA</h3>
     </div>
     <div class="card-body">
-      <a href="{{ route('agenda-detail', $agenda->id) }}">
+      <a href="{{ route('agenda-detail', $agenda->id) }}" class="text-dark">
         <div class="row">
           <div class="col-6">
             <img src="{{ asset('img/agenda/poster/'. $agenda->poster) }}" class="img-fluid" alt=".">
@@ -153,33 +147,68 @@
   <!-- END Agenda -->
 
   <!-- Berita -->
-  <div class="card h-100" >
+  <div class="card shadow h-100 mb-5" >
     <div class="card-header bg-danger text-white text-center">
-      <h3>Berita</h3>
+      <h3>BERITA</h3>
     </div>
     <div class="card-body">
       @foreach($berita as $data)
-      <a href="{{ url('berita/read', $data->slug) }}">
+      <a href="{{ url('berita/read', $data->slug) }}" class="text-dark">
         <div class="row">
           <div class="col-4">
-            <img src="{{ asset('img/berita/'. $data->gambar_berita) }}" class="img-thumbnail" alt="..." style="height:250px; width:300px;"> 
+            <img src="{{ asset('img/berita/'. $data->gambar_berita) }}" class="img-fluid img-thumbnail" alt="..."> 
           </div>
-          <div class="col-8 mt-5">
+          <div class="col-8">
             <h3 class="text-">{{ $data->judul_berita }}</h3>
             <small class="text-muted"><b>{{ $data->user->name }}</b> | {{ $data->created_at->diffForHumans() }}</small>
           </div>
         </div>
       </a>
+      <hr>
       @endforeach
       <a class="text-muted float-right" href="{{ route('berita') }}">Indeks Berita > </a>
     </div>
   </div>
   <!-- END Berita -->
+
+  <!-- KOMUNIKASI -->
+  <div class="card shadow h-100 mb-5" >
+    <div class="card-header bg-danger text-white text-center">
+      <h3>KOMUNIKASI</h3>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        @foreach($komunikasi as $data)
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="text-danger"><b>{{ $data->tentang_komunikasi}}</b></h4>
+              <p>Dikirim oleh <b>{{ $data->nama }}</b></p>
+              <small>6 Nov</small>
+              <p class="text-danger mt-4">
+                  {{ $data->isi_komunikasi }}
+              </p>
+              <hr>
+              <p>Dibalas oleh <b>Admin</b></p>
+              <p>
+                {{ $data->isi_balasan }}
+              </p>
+            </div>
+          </div>
+        </div>
+        @endforeach
+      </div>
+    </div>
+  </div>
+  <!-- END KOMUNIKASI -->
 <!-- Informasi Donor -->
-  <section class="showcase">
+  <div class="showcase">
+    <div class="card-header bg-danger text-white text-center">
+      <h3>TENTANG DONOR DARAH</h3>
+    </div>
+    <div class="card-body">
     <div class="container-fluid p-0 mt-5">
       <div class="row no-gutters">
-
         <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/donor3.jpg');"></div>
         <div class="col-lg-6 order-lg-1-mt-0 my-auto showcase-text">
           <h2>Syarat-syarat pendonor darah</h2>
@@ -255,30 +284,9 @@
         </div>
       </div>
     </div>
+  </div>
   </section>
-  <div class="container mt-3">
-      <div class="row">
-        @foreach($komunikasi as $data)
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="text-danger"><b>{{ $data->tentang_komunikasi}}</b></h4>
-              <p>Dikirim oleh <b>{{ $data->nama }}</b></p>
-              <small>6 Nov</small>
-              <p class="text-danger mt-4">
-                  {{ $data->isi_komunikasi }}
-              </p>
-              <hr>
-              <p>Dibalas oleh <b>Admin</b></p>
-              <p>
-                {{ $data->isi_balasan }}
-              </p>
-            </div>
-          </div>
-        </div>
-        @endforeach
-      </div>
-    </div>
+  
   </div>
   <!-- END Informasi Donor -->
 @endsection

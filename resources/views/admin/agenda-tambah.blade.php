@@ -5,17 +5,16 @@
 @section('container')
 <div class="container-fluid">
     <div class="row">
-        <div class="col mb-4">
-            <div class="d-sm-flex">
-                <a href="" class="text-muted">
-                    <i class="fas fa-calendar-alt fa-2x mr-2"></i>
-                </a>
-                <h3 class="text-gray-800">Agenda</h3>
-            </div>
-        </div>
         <div class="col-md-12">
             <div class="card shadow">
                 <div class="card-body">
+                    <div class="row">
+                        <div class="col mb-4">
+                            <div class="d-sm-flex">
+                                <h1 class="font-weight-bold">Tambah Agenda</h1>
+                            </div>
+                        </div>
+                    </div>
                     <div class="container">
                             <form method="POST" action="{{ route('agenda-store') }}" enctype="multipart/form-data">
                                 @csrf

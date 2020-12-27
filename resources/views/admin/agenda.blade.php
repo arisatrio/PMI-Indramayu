@@ -5,29 +5,24 @@
 @section('container')
 <div class="container-fluid">
     <div class="row">
-        <div class="col mb-4">
-            <div class="d-sm-flex">
-                <a href="" class="text-muted">
-                    <i class="fas fa-calendar-alt fa-2x mr-2"></i>
-                </a>
-                <h3 class="text-gray-800">Agenda</h3>
-            </div>
-        </div>
         <div class="col-sm-12 card shadow">
             <div class="card-body">
-            @if (session('messages'))
-                <div class="alert alert-success alert-dismissible">
-                    {{ session('messages') }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            @endif
-                <div class="row">
+                <div class="row mb-4">
+                    <div class="d-flex">
+                        <h1 class="font-weight-bold">Agenda</h1>
+                    </div>
                     <div class="col">
-                        <a href="{{ route('admin.agenda-tambah') }}" class="btn btn-success mr-2 mb-4">Tambah</a>
+                        <a href="{{ route('admin.agenda-tambah') }}" class="btn btn-success float-right mt-3">Tambah</a>
                     </div>
                 </div>
+                @if (session('messages'))
+                    <div class="alert alert-success alert-dismissible">
+                        {{ session('messages') }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @endif
                 <div class="row">
                     <div class=" col-md-2 nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted" href="{{ route('admin.agenda') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -71,8 +66,8 @@
                                     <td>{{ $data->tgl_kegiatan->formatLocalized('%A, %d %B %Y') }}</td>
                                     <td>{{ $data->jam_mulai }} - {{ $data->jam_selesai}}</td>
                                     <td>
-                                        <a href="{{ route('admin.agenda-detail', $data->id) }}" class="btn btn-secondary btn-sm ml-2" title="Lihat" data-toggle="tooltip">
-                                            <i class="fas fa-eye" aria-hidden="true"></i>
+                                        <a href="{{ route('admin.agenda-detail', $data->id) }}" class="btn btn-outline-secondary btn-sm ml-2" title="Lihat" data-toggle="tooltip">
+                                            Lihat
                                         </a>
                                     </td>
                                 </tr>

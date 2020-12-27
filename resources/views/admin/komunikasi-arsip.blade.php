@@ -5,16 +5,13 @@
 @section('container')
 <div class="container-fluid">
     <div class="row">
-        <div class="col mb-4">
-            <div class="d-sm-flex">
-                <a href="" class="text-muted">
-                    <i class="fas fa-envelope fa-2x mr-2"></i>
-                </a>
-                <h3 class="text-gray-800">Pertanyaan dan Saran</h3>
-            </div>
-        </div>
         <div class="col-sm-12 card shadow">
             <div class="card-body">
+                <div class="row mb-4">
+                    <div class="d-flex">
+                        <h1 class="font-weight-bold">Pertanyaan dan Saran</h1>
+                    </div>
+                </div>
                 <div class="row">
                     <div class=" col-md-2 nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

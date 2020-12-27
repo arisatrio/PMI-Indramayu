@@ -10,6 +10,7 @@ use App\Models\Agenda;
 class AgendaController extends Controller
 {
     protected $WilayahController;
+    
     public function __construct(WilayahController $WilayahController)
     {
         $this->WilayahController = $WilayahController;
@@ -70,7 +71,7 @@ class AgendaController extends Controller
             'alamat_kegiatan'   => 'required',
             'id_kecamatan'      => 'required',
             'id_kelurahan'      => 'required',
-            'nama_koordinator'  => 'required|alpha',
+            'nama_koordinator'  => 'required',
             'notlp_koordinator' => 'required|numeric',
             'jml_pendonor'      => 'required',
             'surat'             => 'required|mimetypes:application/pdf|max:10000',
@@ -79,7 +80,6 @@ class AgendaController extends Controller
         [
             'required'              => 'Form :attribute harus di isi !',
             'numeric'               => 'Form :attribute harus di isi angka !',
-            'alpha'                 => 'Form :attribute harus di isi huruf',
             'surat.mimetypes'       => 'Upload file dengan format pdf !',
             'poster.image'          => 'Upload file berupa gambar (jpeg, png, bmp, gif, svg, atau webp)',
             'tgl_kegiatan.after'    => 'Tanggal Kegiatan harus di isi hari ini atau setelah hari ini !',
